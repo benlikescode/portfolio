@@ -1,9 +1,57 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 400;
+  src: local('Graphik'), url(../fonts/Graphik/Graphik-400-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 500;
+  src: local('Graphik'), url(../fonts/Graphik/Graphik-500-Medium.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 600;
+  src: local('Graphik'), url(../fonts/Graphik/Graphik-600-Semibold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'ClashDisplay';
+  font-weight: 400;
+  src: local('Graphik'), url(../fonts/ClashDisplay/ClashDisplay-Medium.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'ClashDisplay';
+  font-weight: 500;
+  src: local('Graphik'), url(../fonts/ClashDisplay/ClashDisplay-Semibold.otf) format('opentype');
+}
+
+:root {
+  --fontFamily1: "Graphik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;  
+  --fontFamily2: "ClashDisplay", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;  
+
+  --color1: #fff;
+  --color2: #94A3B8;
+  --color3: #64748B;
+  --background1: #0F172A;
+  --background2: #0C1222;
+  --background3: #1E293B;
+  --darkPurple: #7C3AED;
+  --borderColor: #334155;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--background1);
+  color: var(--color1);
+  font-family: var(--fontFamily1);
+  font-weight: 400;
 }
 
 a {
@@ -13,4 +61,41 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+input, button, select, textarea {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  border: 0;
+  font-family: var(--fontFamily1);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Scrollbar */
+
+::-webkit-scrollbar {
+  width: 7px;
+  background: var(--background3);
+  border-radius: 50rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color3);
+  border-radius: 50rem;
 }
