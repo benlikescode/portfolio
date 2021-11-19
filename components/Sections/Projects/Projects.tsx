@@ -10,7 +10,7 @@ const Projects: FC = () => {
     imageUrl: '/images/GeoHub.png',
     description: 'The main game mode is based on the popular game Geoguessr, where you have to guess where you are in the world after being placed in a random location.',
     tags: ['NextJS', 'TypeScript', 'MongoDB', 'Google Maps API'],
-    githubLink: ''
+    githubLink: 'https://github.com/benlikescode/geohub'
   }
 
   const project2: Project = {
@@ -18,12 +18,12 @@ const Projects: FC = () => {
     imageUrl: '/images/Bencord.png',
     description: 'A frontend clone of discord with many features such as realtime messaging, creating servers, inviting friends, banning, roles, and basic voice chat functionality.',
     tags: ['React', 'TypeScript', 'Firebase', 'Redux'],
-    githubLink: ''
+    githubLink: 'https://github.com/benlikescode/discord'
   }
 
   return (
-    <StyledProjects>
-      <section className="projectsSection" id="projects">
+    <StyledProjects id="projects">
+      <section className="projectsSection">
         <h3>Projects</h3>
         <div className="projectCards">
           <ProjectCard project={project1} />
