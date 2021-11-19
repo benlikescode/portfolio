@@ -8,13 +8,13 @@ type Props = {
   placeholder?: string;
   value?: string;
   callback?: any;
-  isDisabled?: boolean;
   errorMessage?: string;
   handleErrors?: () => void;
   readOnly?: boolean;
   autoComplete?: string;
   maxLength?: number;
   isTextArea?: boolean;
+  isRequired?: boolean;
 }
 
 const Input: FC<Props> = ({ 
@@ -24,13 +24,13 @@ const Input: FC<Props> = ({
   placeholder, 
   value, 
   callback, 
-  isDisabled, 
   errorMessage, 
   handleErrors, 
   readOnly,
   autoComplete,
   maxLength,
-  isTextArea
+  isTextArea,
+  isRequired
 }) => {
   const [currValue, setCurrValue] = useState<string | number>(value || '')
   const [showErrorMsg, setShowErrorMsg] = useState(false)
@@ -69,6 +69,7 @@ const Input: FC<Props> = ({
             autoComplete={autoComplete}    
             maxLength={maxLength || 2000}
             id={name}
+            required={isRequired}
           />
 
           :
@@ -85,6 +86,7 @@ const Input: FC<Props> = ({
             autoComplete={autoComplete}    
             maxLength={maxLength || 2000}
             id={name}
+            required={isRequired}
           />
         }
         
