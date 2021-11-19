@@ -54,7 +54,7 @@ const Input: FC<Props> = ({
 
   return (
     <StyledInput isTextArea={isTextArea}>
-      {label && <label>{ label }</label>}
+      {label && <label htmlFor={name}>{ label }</label>}
 
       <div className="input-styled">
         {isTextArea ?
@@ -68,6 +68,7 @@ const Input: FC<Props> = ({
             onBlur={() => handleBlur()}   
             autoComplete={autoComplete}    
             maxLength={maxLength || 2000}
+            id={name}
           />
 
           :
@@ -83,6 +84,7 @@ const Input: FC<Props> = ({
             onBlur={() => handleBlur()}   
             autoComplete={autoComplete}    
             maxLength={maxLength || 2000}
+            id={name}
           />
         }
         

@@ -34,6 +34,7 @@ const Contact: FC = () => {
         </section>
 
         <form className="contactForm" name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
           <div className="topInputs">
             <Input type="text" name="name" label="Name" maxLength={60}/>
             <Input type="text" name="email" label="Email" maxLength={60}/>
