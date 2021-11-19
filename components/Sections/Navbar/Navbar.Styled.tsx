@@ -15,11 +15,12 @@ const StyledNavbar = styled.div<StyledProps>`
   display: flex;
   justify-content: center;
   background-color: var(--background1);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: 0.2s ease-in;
 
   ${({ scrollDirection, atTop }) => scrollDirection === 'up' && !atTop && `
     transform: translateY(0px);
     background-color: var(--background1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   `}
 
   ${({ scrollDirection, atTop }) => scrollDirection === 'down' && !atTop && `
