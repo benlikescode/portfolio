@@ -52,6 +52,7 @@ body {
   color: var(--color1);
   font-family: var(--fontFamily1);
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 
 a {

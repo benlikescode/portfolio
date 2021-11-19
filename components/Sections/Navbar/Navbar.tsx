@@ -1,14 +1,30 @@
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { StyledNavbar } from '.'
 import { Icon } from '../../Icon'
 import { SunIcon } from '@heroicons/react/solid'
 import { Button } from '../../Button'
+import { useScrollDirection } from '../../../utils/hooks'
 
 const Navbar: FC = () => {
+  const [atTop, setAtTop] = useState(true)
+  const scrollDirection = useScrollDirection('down')
+
+  const handleScroll = () => {
+    setAtTop(window.scrollY < 68)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+  
   return (
-    <StyledNavbar>
+    <StyledNavbar atTop={atTop} scrollDirection={scrollDirection}>
       <header>
-        <h3 className="logo">Ben Hoeg</h3>
+        <h2 className="logo">Ben Hoeg</h2>
 
         <nav>
           <ul>
