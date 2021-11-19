@@ -27,14 +27,15 @@ const StyledInput = styled.div<StyledProps>`
       width: 100%;
       box-sizing: border-box;
       color: var(--color1);
-      border: var(--border);
+      border: 1px solid var(--borderColor);
       outline: none;
       font-size: 1rem;
       font-weight: 400;
       
       ::placeholder {
-        color: var(--color3);
+        color: var(--color1);
       }
+
       :focus {
         border: 1px solid #8054ff;
         outline: 2px solid #8054ff61;
@@ -45,20 +46,22 @@ const StyledInput = styled.div<StyledProps>`
   textarea {
     height: 100%;
     border-radius: 5px;
-    padding: 8px 14px;
+    padding: 14px;
     background-color: var(--background3);
     width: 100%;
     box-sizing: border-box;
     color: var(--color1);
-    border: var(--border);
+    border: 1px solid var(--borderColor);
     outline: none;
     font-size: 1rem;
     font-weight: 400;
     resize: none;
+    line-height: 24px;
     
     ::placeholder {
-      color: var(--color3);
+      color: var(--color1);
     }
+
     :focus {
       border: 1px solid #8054ff;
       outline: 2px solid #8054ff61;
