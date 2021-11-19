@@ -1,10 +1,8 @@
 import { FC, useEffect, useState } from 'react'
 import { StyledNavbar } from '.'
-import { Icon } from '../../Icon'
-import { SunIcon } from '@heroicons/react/solid'
-import { Button } from '../../Button'
 import { useScrollDirection } from '../../../utils/hooks'
 import { Menu } from '../../Menu'
+import Link from 'next/link'
 
 const Navbar: FC = () => {
   const [atTop, setAtTop] = useState(true)
@@ -29,22 +27,23 @@ const Navbar: FC = () => {
 
         <nav>
           <ul className="linksWrapper">
-            <li>
-              <a href="#about">About Me</a>
-            </li>
-            <li>
-              <a href="#projects">My Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact Me</a>
-            </li>
-            <li>
-              <Button type="icon">
-                <Icon size={24} fill="#CFC358">
-                  <SunIcon />
-                </Icon>
-              </Button>          
-            </li>
+            <Link href="/#about">
+              <a>
+                <li>About Me</li>
+              </a>          
+            </Link>
+
+            <Link href="/#projects">
+              <a >
+                <li>My Projects</li>
+              </a>          
+            </Link>
+
+            <Link href="/#contact">
+              <a>
+                <li>Contact Me</li>
+              </a>          
+            </Link>
           </ul>
 
           <Menu />

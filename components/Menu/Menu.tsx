@@ -12,7 +12,7 @@ const Menu: FC = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen)
   const wrapperRef = useRef(null)
   useOnClickOutside(wrapperRef, () => setMenuOpen(false))
-  
+
   return (
     <StyledMenu menuOpen={menuOpen}>
       <div className="menuWrapper" ref={wrapperRef}>
@@ -25,19 +25,19 @@ const Menu: FC = () => {
         <StyledSidebar menuOpen={menuOpen}>
           <nav>
             <ul>
-              <Link href="#about">
+              <Link href="/#about">
                 <a onClick={() => setMenuOpen(false)}>
                   <li>About Me</li>
                 </a>          
               </Link>
 
-              <Link href="#projects">
+              <Link href="/#projects">
                 <a onClick={() => setMenuOpen(false)}>
                   <li>My Projects</li>
                 </a>          
               </Link>
 
-              <Link href="#contact">
+              <Link href="/#contact">
                 <a onClick={() => setMenuOpen(false)}>
                   <li>Contact Me</li>
                 </a>          
