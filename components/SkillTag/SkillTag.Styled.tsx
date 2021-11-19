@@ -18,10 +18,36 @@ const StyledSkillTag = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  .icon {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      height: 100%;
+      width: 100%;
+
+      path {
+        stroke-width: 1.5;
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
 
   .skillTagLabel {
     color: var(--color1);
+    font-size: 1rem;
   }
 `
 

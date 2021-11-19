@@ -5,9 +5,10 @@ const StyledAbout = styled.div`
   align-items: center;
   justify-content: center;
   background: linear-gradient(360deg,#382a4e 0%,rgba(0,255,240,0) 100%);
+  padding: 0 2rem;
 
   .about {
-    max-width: ${({ theme }) => `${theme.breakpoint.l}px`};
+    max-width: ${({ theme }) => theme.breakpoint.l};
     width: 100%;
     padding: 5rem 0;
   }
@@ -15,12 +16,21 @@ const StyledAbout = styled.div`
   .skillRow {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 1rem;
+    flex-wrap: wrap;
     margin-top: 10px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+      font-size: 1.4rem;
+    }
   }
 
   h3 {
     font-size: 1.8rem;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+      font-size: 1.4rem;
+    }
   }
 
   h4 { 
@@ -32,8 +42,12 @@ const StyledAbout = styled.div`
   .aboutText {
     color: var(--color3);
     font-size: 26px;
-    font-family: Graphik;
     line-height: 40px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   .skillsWrapper {

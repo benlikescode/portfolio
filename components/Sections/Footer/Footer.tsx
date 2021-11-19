@@ -7,12 +7,12 @@ const Footer: FC = () => {
   return (
     <StyledFooter>
       <footer>
-        <span>Built with ❤️ by Ben Hoeg</span>
+        <span className="footerText">Built with ❤️ by Ben Hoeg</span>
 
         <ul className="socials">
           <li className="socialItem">
             <a href="https://www.linkedin.com/in/benhoeg/" target="_blank" rel="noreferrer">
-              <Icon size={25} fill="var(--color3)">
+              <Icon size={20} fill="var(--color3)">
                 <LinkedInIcon />
               </Icon>
             </a>
@@ -20,7 +20,7 @@ const Footer: FC = () => {
 
           <li className="socialItem">
             <a href="https://github.com/benlikescode" target="_blank" rel="noreferrer">
-              <Icon size={25} fill="var(--color3)">
+              <Icon size={20} fill="var(--color3)">
                 <GithubIcon />
               </Icon>
             </a>
@@ -28,7 +28,7 @@ const Footer: FC = () => {
 
           <li className="socialItem">
             <a href="https://twitter.com/benlikescode" target="_blank" rel="noreferrer">
-              <Icon size={25} fill="var(--color3)">
+              <Icon size={20} fill="var(--color3)">
                 <TwitterIcon />
               </Icon>
             </a>

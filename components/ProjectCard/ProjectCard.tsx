@@ -14,8 +14,9 @@ const ProjectCard: FC<Props> = ({ project }) => {
   return (
     <StyledProjectCard>
       <div className="previewImg">
-        <Image src={project.imageUrl} alt={`${project.name} preview`} layout="fill" />
+        <Image src={project.imageUrl} alt={`${project.name} preview`} width={546} height={240} objectFit="cover" />
       </div>
+      
 
       <section className="projectContent">
         <div className="titleRow">

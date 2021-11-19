@@ -4,6 +4,7 @@ import { Icon } from '../../Icon'
 import { SunIcon } from '@heroicons/react/solid'
 import { Button } from '../../Button'
 import { useScrollDirection } from '../../../utils/hooks'
+import { Menu } from '../../Menu'
 
 const Navbar: FC = () => {
   const [atTop, setAtTop] = useState(true)
@@ -27,7 +28,7 @@ const Navbar: FC = () => {
         <h2 className="logo">Ben Hoeg</h2>
 
         <nav>
-          <ul>
+          <ul className="linksWrapper">
             <li>
               <a href="#about">About Me</a>
             </li>
@@ -45,7 +46,10 @@ const Navbar: FC = () => {
               </Button>          
             </li>
           </ul>
+
+          <Menu />
         </nav>
+        
       </header>
       
      

@@ -16,6 +16,7 @@ const StyledNavbar = styled.div<StyledProps>`
   justify-content: center;
   background-color: var(--background1);
   transition: 0.2s ease-in;
+  padding: 0 2rem;
 
   ${({ scrollDirection, atTop }) => scrollDirection === 'up' && !atTop && `
     transform: translateY(0px);
@@ -27,6 +28,7 @@ const StyledNavbar = styled.div<StyledProps>`
     transform: translateY(-68px);
   `}
 
+  
   .logo {
     font-size: 1.7rem;
     font-weight: 400;
@@ -34,18 +36,26 @@ const StyledNavbar = styled.div<StyledProps>`
   }
 
   header {
-    max-width: ${({ theme }) => `${theme.breakpoint.l}px`};
+    max-width: ${({ theme }) => theme.breakpoint.l};
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  ul {
+  .linksWrapper {
     display: flex;
     align-items: center;
     gap: 30px;
     font-weight: 400;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.m}) {
+      gap: 20px;
+    }  
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+      display: none;
+    }
   }
 `
 

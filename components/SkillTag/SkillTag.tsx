@@ -11,7 +11,9 @@ const SkillTag: FC<Props> = ({ label, icon }) => {
   return (
     <StyledSkillTag>
       <div className="iconWrapper">
-        <Icon size={23}>{icon}</Icon>
+        <div className="icon">
+          {icon}
+        </div>
       </div>
 
       <span className="skillTagLabel">{label}</span>
