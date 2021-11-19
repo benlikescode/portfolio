@@ -4,12 +4,12 @@ const StyledAbout = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(360deg,rgba(217,70,239,0.22) 0%,rgba(0,255,240,0) 100%);
-  padding: 2rem;
+  background: linear-gradient(360deg,#382a4e 0%,rgba(0,255,240,0) 100%);
 
   .about {
     max-width: ${({ theme }) => `${theme.breakpoint.l}px`};
     width: 100%;
+    padding: 5rem 0;
   }
 
   .skillRow {

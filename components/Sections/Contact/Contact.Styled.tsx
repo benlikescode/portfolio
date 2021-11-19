@@ -5,13 +5,13 @@ const StyledContact = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem;
 
   .contactSection {
     max-width: ${({ theme }) => `${theme.breakpoint.l}px`};
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 4rem 0;
   }
 
   .contactForm {
