@@ -4,6 +4,7 @@ import { StyledInput } from '.'
 type Props = {
   label?: string;
   type: string;
+  name: string;
   placeholder?: string;
   value?: string;
   callback?: any;
@@ -19,6 +20,7 @@ type Props = {
 const Input: FC<Props> = ({ 
   label, 
   type, 
+  name,
   placeholder, 
   value, 
   callback, 
@@ -58,6 +60,7 @@ const Input: FC<Props> = ({
         {isTextArea ?
           <textarea 
             placeholder={placeholder} 
+            name={name}
             onChange={(e) => onInputChange(e.currentTarget.value)} 
             value={currValue} 
             lang="en" 
@@ -71,6 +74,7 @@ const Input: FC<Props> = ({
          
           <input 
             placeholder={placeholder} 
+            name={name}
             onChange={(e) => onInputChange(e.currentTarget.value)} 
             value={currValue} 
             type={type}

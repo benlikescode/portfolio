@@ -33,12 +33,12 @@ const Contact: FC = () => {
           </div>
         </section>
 
-        <form className="contactForm">
+        <form className="contactForm" name="contact" method="POST" data-netlify="true">
           <div className="topInputs">
-            <Input type="text" label="Name" maxLength={60}/>
-            <Input type="text" label="Email" maxLength={60}/>
+            <Input type="text" name="name" label="Name" maxLength={60}/>
+            <Input type="text" name="email" label="Email" maxLength={60}/>
           </div>
-          <Input type="text" label="Message" maxLength={2000} isTextArea/>
+          <Input type="text" name="message" label="Message" maxLength={2000} isTextArea/>
           <Button type="solid" width="100%">Send Message</Button>
         </form>
       </section>
