@@ -35,10 +35,10 @@ const Contact: FC = () => {
 
         <form className="contactForm">
           <div className="topInputs">
-            <Input type="text" label="Name"/>
-            <Input type="text" label="Email"/>
+            <Input type="text" label="Name" maxLength={60}/>
+            <Input type="text" label="Email" maxLength={60}/>
           </div>
-          <Input type="text" label="Message" isTextArea/>
+          <Input type="text" label="Message" maxLength={2000} isTextArea/>
           <Button type="solid" width="100%">Send Message</Button>
         </form>
       </section>
