@@ -11,7 +11,7 @@ const Footer: FC = () => {
 
         <ul className="socials">
           <li className="socialItem">
-            <a href="https://www.linkedin.com/in/benhoeg/" target="_blank">
+            <a href="https://www.linkedin.com/in/benhoeg/" target="_blank" rel="noreferrer">
               <Icon size={25} fill="var(--color3)">
                 <LinkedInIcon />
               </Icon>
@@ -19,7 +19,7 @@ const Footer: FC = () => {
           </li>
 
           <li className="socialItem">
-            <a href="https://github.com/benlikescode" target="_blank">
+            <a href="https://github.com/benlikescode" target="_blank" rel="noreferrer">
               <Icon size={25} fill="var(--color3)">
                 <GithubIcon />
               </Icon>
@@ -27,7 +27,7 @@ const Footer: FC = () => {
           </li>
 
           <li className="socialItem">
-            <a href="https://twitter.com/benlikescode" target="_blank">
+            <a href="https://twitter.com/benlikescode" target="_blank" rel="noreferrer">
               <Icon size={25} fill="var(--color3)">
                 <TwitterIcon />
               </Icon>
