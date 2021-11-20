@@ -45,6 +45,7 @@ const StyledSidebar = styled.aside<StyledProps>`
     }
 
     a {
+      display: block;
       width: 100%;
     }
   }

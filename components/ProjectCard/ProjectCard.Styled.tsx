@@ -35,6 +35,7 @@ const StyledProjectCard = styled.div`
     display: flex;
     align-items: center;
     gap: 8px;
+    margin-top: -3px;
   }
 
   .projectDesc {

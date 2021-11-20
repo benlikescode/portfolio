@@ -22,17 +22,21 @@ const ProjectCard: FC<Props> = ({ project }) => {
         <div className="titleRow">
           <h4>{project.name}</h4>
           <div className="projectLinks">
-            <a href={project.githubLink} target="_blank" rel="noreferrer">
-              <Icon size={22}>
-                <GithubIcon />
-              </Icon>
-            </a>
-
-            <a href={project.liveLink} target="_blank" rel="noreferrer">
-              <Icon size={26}>
-                <ExternalLinkIcon />
-              </Icon>
-            </a>          
+            {project.githubLink && (
+              <a href={project.githubLink} target="_blank" rel="noreferrer">
+                <Icon size={22}>
+                  <GithubIcon />
+                </Icon>
+              </a>
+            )}
+           
+            {project.liveLink && (
+              <a href={project.liveLink} target="_blank" rel="noreferrer">
+                <Icon size={26}>
+                  <ExternalLinkIcon />
+                </Icon>
+              </a>  
+            )}               
           </div>
         </div>
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const StyledSkillTag = styled.div`
+const StyledSkillTag = styled.li`
   display: flex;
   align-items: center;
   gap: 7px;

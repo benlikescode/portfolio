@@ -24,24 +24,24 @@ const Menu: FC = () => {
 
         <StyledSidebar menuOpen={menuOpen}>
           <nav>
-            <ul>
-              <Link href="/#about">
-                <a onClick={() => setMenuOpen(false)}>
-                  <li>About Me</li>
-                </a>          
-              </Link>
+            <ul>           
+              <li>
+                <Link href="/#about">
+                  <a onClick={() => setMenuOpen(false)}>About Me</a>          
+                </Link>
+              </li>
 
-              <Link href="/#projects">
-                <a onClick={() => setMenuOpen(false)}>
-                  <li>My Projects</li>
-                </a>          
-              </Link>
+              <li>
+                <Link href="/#projects">
+                  <a onClick={() => setMenuOpen(false)}>My Projects</a>          
+                </Link>
+              </li>
 
-              <Link href="/#contact">
-                <a onClick={() => setMenuOpen(false)}>
-                  <li>Contact Me</li>
-                </a>          
-              </Link>
+              <li>
+                <Link href="/#contact">
+                  <a onClick={() => setMenuOpen(false)}>Contact Me</a>          
+                </Link>
+              </li>  
             </ul>  
           </nav>
         </StyledSidebar>

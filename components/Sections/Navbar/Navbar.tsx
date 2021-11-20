@@ -27,23 +27,23 @@ const Navbar: FC = () => {
 
         <nav>
           <ul className="linksWrapper">
-            <Link href="/#about">
-              <a>
-                <li>About Me</li>
-              </a>          
-            </Link>
+            <li>
+              <Link href="/#about">
+                <a>About Me</a>          
+              </Link>
+            </li>
 
-            <Link href="/#projects">
-              <a >
-                <li>My Projects</li>
-              </a>          
-            </Link>
+            <li>
+              <Link href="/#projects">
+                <a>My Projects</a>          
+              </Link>
+            </li>
 
-            <Link href="/#contact">
-              <a>
-                <li>Contact Me</li>
-              </a>          
-            </Link>
+            <li>
+              <Link href="/#contact">
+                <a>Contact Me</a>          
+              </Link>
+            </li>       
           </ul>
 
           <Menu />
