@@ -42,6 +42,23 @@ const StyledHero = styled.div`
       font-size: 3rem;
     }
   }
+
+  .ctaBtn {
+    display: block;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 5px;
+    height: 42px;
+    padding: 0 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    width: fit-content;
+    user-select: none;
+    background-color: var(--darkPurple);
+  }
   
 `
 
