@@ -33,7 +33,7 @@ const Contact: FC = () => {
           </div>
         </section>
 
-        <form className="contactForm" name="contact" method="POST" data-netlify="true">
+        <form className="contactForm" name="contact" method="POST" action="/" data-netlify="true">
           <input type="hidden" name="form-name" value="contact" />
           <div className="topInputs">
             <Input 
