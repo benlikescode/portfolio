@@ -7,7 +7,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Ben Hoeg</title>
-        <meta name="description" content="Ben Is Cool" />
+        <meta name="description" content="Ben Hoeg is a fullstack software developer." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
