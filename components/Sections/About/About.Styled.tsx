@@ -4,7 +4,6 @@ const StyledAbout = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(360deg,#382a4e 0%,rgba(0,255,240,0) 100%);
   padding: 0 2rem;
 
   .about {
@@ -25,15 +24,15 @@ const StyledAbout = styled.div`
     }
   }
 
-  h3 {
-    font-size: 1.8rem;
+  h2 {
+    font-size: 2.5rem;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
   }
 
-  h4 { 
+  h3 { 
     font-size: 20px;
     font-weight: 500;
     color: #D0D0D0;

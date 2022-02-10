@@ -23,11 +23,10 @@ const StyledInput = styled.div<StyledProps>`
       height: 100%;
       border-radius: 5px;
       padding: 0 14px;
-      background-color: var(--background3);
+      background-color: #31152d;
       width: 100%;
       box-sizing: border-box;
       color: var(--color1);
-      border: 1px solid var(--borderColor);
       outline: none;
       font-size: 1rem;
       font-weight: 400;
@@ -35,11 +34,7 @@ const StyledInput = styled.div<StyledProps>`
       ::placeholder {
         color: var(--color1);
       }
-
-      :focus {
-        border: 1px solid #8054ff;
-        outline: 2px solid #8054ff61;
-      } 
+ 
     }
   }
 
@@ -47,11 +42,10 @@ const StyledInput = styled.div<StyledProps>`
     height: 100%;
     border-radius: 5px;
     padding: 14px;
-    background-color: var(--background3);
+    background-color: #31152d;
     width: 100%;
     box-sizing: border-box;
     color: var(--color1);
-    border: 1px solid var(--borderColor);
     outline: none;
     font-size: 1rem;
     font-weight: 400;
@@ -61,11 +55,6 @@ const StyledInput = styled.div<StyledProps>`
     ::placeholder {
       color: var(--color1);
     }
-
-    :focus {
-      border: 1px solid #8054ff;
-      outline: 2px solid #8054ff61;
-    } 
   }
 
   .inputError {

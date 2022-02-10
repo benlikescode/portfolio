@@ -10,7 +10,7 @@ const Contact: FC = () => {
     <StyledContact>
       <section className="contactSection" id="contact">
         <section className="contactLeft">
-          <h3>Contact Me</h3>
+          <h2>Contact Me</h2>
           <p className="contactText">Feel free to send me a message or an email, if you want to connect! </p>
           <div className="contactInfoWrapper">
             <div className="contactItem">

@@ -24,11 +24,11 @@ const StyledProjects = styled.div`
     }
   }
 
-  h3 {
-    font-size: 1.8rem;
+  h2 {
+    font-size: 2.5rem;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
   }
   

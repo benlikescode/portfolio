@@ -3,6 +3,7 @@ import { StyledNavbar } from '.'
 import { useScrollDirection } from '../../../utils/hooks'
 import { Menu } from '../../Menu'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Navbar: FC = () => {
   const [atTop, setAtTop] = useState(true)
@@ -21,27 +22,33 @@ const Navbar: FC = () => {
   }, [])
   
   return (
-    <StyledNavbar atTop={atTop} scrollDirection={scrollDirection}>
+    <StyledNavbar atTop={atTop}>
       <header>
-        <h2 className="logo">Ben Hoeg</h2>
+        <Link href="/">
+          <a className="avatarWrapper">
+            <div className="avatar">
+              <img src="favicon.ico" alt="Ben Hoeg" />
+            </div>  
+          </a>
+        </Link>
 
         <nav>
           <ul className="linksWrapper">
             <li>
               <Link href="/#about">
-                <a>About Me</a>          
+                <a className="navLink">About Me</a>          
               </Link>
             </li>
 
             <li>
               <Link href="/#projects">
-                <a>My Projects</a>          
+                <a className="navLink">My Projects</a>          
               </Link>
             </li>
 
             <li>
               <Link href="/#contact">
-                <a>Contact Me</a>          
+                <a className="navLink">Contact Me</a>          
               </Link>
             </li>       
           </ul>
@@ -49,9 +56,7 @@ const Navbar: FC = () => {
           <Menu />
         </nav>
         
-      </header>
-      
-     
+      </header>    
     </StyledNavbar>
   )
 }

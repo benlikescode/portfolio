@@ -24,7 +24,7 @@ const Projects: FC = () => {
   return (
     <StyledProjects id="projects">
       <section className="projectsSection">
-        <h3>Projects</h3>
+        <h2>Projects</h2>
         <div className="projectCards">
           <ProjectCard project={project1} />
           <ProjectCard project={project2} />

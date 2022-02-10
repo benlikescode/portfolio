@@ -19,6 +19,24 @@
 }
 
 @font-face {
+  font-family: 'Graphik';
+  font-weight: 700;
+  src: local('Graphik'), url(../fonts/Graphik/Graphik-700-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 800;
+  src: local('Graphik'), url(../fonts/Graphik/Graphik-800-Black.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 900;
+  src: local('Graphik'), url(../fonts/Graphik/Graphik-900-Super.otf) format('opentype');
+}
+
+@font-face {
   font-family: 'ClashDisplay';
   font-weight: 400;
   src: local('Graphik'), url(../fonts/ClashDisplay/ClashDisplay-Medium.otf) format('opentype');
@@ -48,7 +66,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: var(--background1);
+  background-color: #000;
   color: var(--color1);
   font-family: var(--fontFamily1);
   font-weight: 400;
@@ -69,7 +87,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 input, button, select, textarea {
-  outline: none;
   margin: 0;
   padding: 0;
   font-size: 1rem;
@@ -86,6 +103,11 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+*:focus {
+  outline: 2px solid var(--darkPurple);
+  outline-offset: 3px;
 }
 
 /* Custom Scrollbar */

@@ -29,9 +29,9 @@ const StyledHero = styled.div`
   }
 
   .ctaTitle {
-    font-size: 5.3rem;
-    color: var(--color2);
-    font-weight: 400;
+    font-size: 8rem;
+    color: var(--color1);
+    font-weight: 700;
     margin-bottom: 2rem;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.m}) {
@@ -58,6 +58,12 @@ const StyledHero = styled.div`
     width: fit-content;
     user-select: none;
     background-color: var(--darkPurple);
+  }
+
+  .subHeader {
+    font-size: 6rem;
+    color: var(--color2);
+    font-weight: 500;
   }
   
 `

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledProjectCard = styled.div`
-  background-color: var(--background3);
+  background-color: #180b16;
   border-radius: 10px;
   padding: 22px;
   border: 1px solid rgba(255, 255, 255, 0.1);

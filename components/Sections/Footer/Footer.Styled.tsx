@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 const StyledFooter = styled.div`
-  background-color: var(--background2);
-  border-top: 1px solid var(--borderColor);
+  background-color: #0f070e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,6 +33,11 @@ const StyledFooter = styled.div`
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
       font-size: 0.8rem;
     }
+  }
+
+  .socialItem a {
+    height: 20px;
+    width: 20px;
   }
 `
 

@@ -2,11 +2,9 @@ import styled from 'styled-components'
 
 type StyledProps = {
   atTop?: boolean;
-  scrollDirection: 'up' | 'down';
 }
 
 const StyledNavbar = styled.div<StyledProps>`
-  border-bottom: 1px solid var(--borderColor);
   height: 68px;
   position: sticky;
   top: 0;
@@ -14,21 +12,15 @@ const StyledNavbar = styled.div<StyledProps>`
   font-family: var(--fontFamily2);
   display: flex;
   justify-content: center;
-  background-color: var(--background1);
   transition: 0.2s ease-in;
   padding: 0 2rem;
-
-  ${({ scrollDirection, atTop }) => scrollDirection === 'up' && !atTop && `
-    transform: translateY(0px);
-    background-color: var(--background1);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  `}
-
-  ${({ scrollDirection, atTop }) => scrollDirection === 'down' && !atTop && `
-    transform: translateY(-68px);
-  `}
-
   
+  ${({ atTop }) => !atTop && `
+    background-color: #361532;
+    opacity: 0.98;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.55);
+  `}
+
   .logo {
     font-size: 1.7rem;
     font-weight: 400;
@@ -55,6 +47,39 @@ const StyledNavbar = styled.div<StyledProps>`
 
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
       display: none;
+    }
+  }
+
+  .navLink {
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+
+  .avatarWrapper {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #a8207b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar {
+    height: 32px;
+    width: 32px;
+    position: relative;
+ 
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      object-fit: cover;
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
     }
   }
 `

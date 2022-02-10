@@ -8,8 +8,12 @@ const Hero: FC = () => {
   return (
     <StyledHero>
       <section className="heroContent">
-        <h2 className="greetingTitle">Hi, I&apos;m Ben!</h2>
-        <h1 className="ctaTitle">I Build Things For The Web.</h1>
+        <h1 className="ctaTitle">
+          <span>Ben Hoeg</span>
+          <br />
+          <span className="subHeader">Software Developer</span>
+        </h1>
+      
         <Link href="/#projects">  
           <a className="ctaBtn">
             <span>Check Out My Projects</span>

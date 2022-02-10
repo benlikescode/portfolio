@@ -1,17 +1,30 @@
 import { FC } from 'react'
 import { StyledAbout } from '.'
-import { FigmaIcon, FirebaseIcon, GithubIcon, JiraIcon, MongoIcon, MySQLIcon, NextIcon, NodeIcon, NotionIcon, ReactIcon, ReduxIcon, SlackIcon, TSIcon } from '../../Icon'
 import { SkillTag } from '../../SkillTag'
+import { 
+  FigmaIcon, 
+  GithubIcon, 
+  JiraIcon, 
+  MongoIcon, 
+  MySQLIcon, 
+  NextIcon, 
+  NodeIcon, 
+  NotionIcon, 
+  ReactIcon, 
+  ReduxIcon, 
+  SlackIcon, 
+  TSIcon 
+} from '../../Icon'
 
 const About: FC = () => {
   return (
     <StyledAbout>
       <section className="about" id="about">
-        <h3>About Me</h3>
+        <h2>About Me</h2>
         <p className="aboutText">I’m a passionate software developer with experience in building amazing frontend designs and optimizing backend logic.</p>
         <section className="skillsWrapper">
           <div className="skillRowWrapper">
-            <h4>Main Skills</h4>
+            <h3>Main Skills</h3>
             <ul className="skillRow">
               <SkillTag label="React" icon={<ReactIcon />}/>
               <SkillTag label="TypeScript" icon={<TSIcon />}/>
@@ -19,13 +32,12 @@ const About: FC = () => {
               <SkillTag label="NodeJS" icon={<NodeIcon />}/>
               <SkillTag label="Redux" icon={<ReduxIcon />}/>
               <SkillTag label="MongoDB" icon={<MongoIcon />}/>
-              <SkillTag label="Firebase" icon={<FirebaseIcon />}/>
               <SkillTag label="MySQL" icon={<MySQLIcon />}/>
             </ul>       
           </div>
 
           <div className="skillRowWrapper">
-            <h4>Tools</h4>
+            <h3>Tools</h3>
             <ul className="skillRow">
               <SkillTag label="Slack" icon={<SlackIcon />}/>
               <SkillTag label="Github" icon={<GithubIcon />}/>
