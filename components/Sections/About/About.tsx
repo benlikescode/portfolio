@@ -32,7 +32,6 @@ const About: FC = () => {
               <SkillTag label="NodeJS" icon={<NodeIcon />}/>
               <SkillTag label="Redux" icon={<ReduxIcon />}/>
               <SkillTag label="MongoDB" icon={<MongoIcon />}/>
-              <SkillTag label="MySQL" icon={<MySQLIcon />}/>
             </ul>       
           </div>
 
@@ -42,7 +41,6 @@ const About: FC = () => {
               <SkillTag label="Slack" icon={<SlackIcon />}/>
               <SkillTag label="Github" icon={<GithubIcon />}/>
               <SkillTag label="Jira" icon={<JiraIcon />}/>
-              <SkillTag label="Notion" icon={<NotionIcon />}/>
               <SkillTag label="Figma" icon={<FigmaIcon />}/>       
             </ul>       
           </div>
