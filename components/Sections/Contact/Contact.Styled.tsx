@@ -1,12 +1,11 @@
 import styled from 'styled-components'
 
 const StyledContact = styled.div`
-  background-color: #180b16;
+  background-color: #0d040c;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 2rem;
-  border-top: 1px solid #2c242c;
 
   .contactSection {
     max-width: ${({ theme }) => theme.breakpoint.l};
@@ -83,7 +82,7 @@ const StyledContact = styled.div`
   .contactIcon {
     height: 40px;
     width: 40px;
-    background-color: var(--darkPurple);
+    background-color: #052d25;
     border-radius: 50%;
     display: flex;
     align-items: center;

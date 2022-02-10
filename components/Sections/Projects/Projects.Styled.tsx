@@ -9,7 +9,7 @@ const StyledProjects = styled.div`
   .projectsSection {
     max-width: ${({ theme }) => theme.breakpoint.l};
     width: 100%;
-    padding: 5rem 0;
+    padding: 5rem 0 10rem 0;
   }
 
   .projectCards {

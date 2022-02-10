@@ -1,13 +1,10 @@
 import { FC, useEffect, useState } from 'react'
 import { StyledNavbar } from '.'
-import { useScrollDirection } from '../../../utils/hooks'
 import { Menu } from '../../Menu'
 import Link from 'next/link'
-import Image from 'next/image'
 
 const Navbar: FC = () => {
   const [atTop, setAtTop] = useState(true)
-  const scrollDirection = useScrollDirection('down')
 
   const handleScroll = () => {
     setAtTop(window.scrollY < 68)
@@ -25,10 +22,12 @@ const Navbar: FC = () => {
     <StyledNavbar atTop={atTop}>
       <header>
         <Link href="/">
-          <a className="avatarWrapper">
-            <div className="avatar">
-              <img src="favicon.ico" alt="Ben Hoeg" />
-            </div>  
+          <a>
+            <div className="avatarWrapper">
+              <div className="avatar">
+                <img src="favicon.ico" alt="Ben Hoeg" />
+              </div> 
+            </div>          
           </a>
         </Link>
 
@@ -54,8 +53,7 @@ const Navbar: FC = () => {
           </ul>
 
           <Menu />
-        </nav>
-        
+        </nav>     
       </header>    
     </StyledNavbar>
   )

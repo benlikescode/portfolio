@@ -10,7 +10,8 @@ const Projects: FC = () => {
     imageUrl: '/images/GeoHub.png',
     description: 'The main game mode is based on the popular game Geoguessr, where you have to guess where you are in the world after being placed in a random location.',
     tags: ['NextJS', 'TypeScript', 'MongoDB', 'Google Maps API'],
-    githubLink: 'https://github.com/benlikescode/geohub'
+    githubLink: 'https://github.com/benlikescode/geohub',
+    liveLink: 'https://geohub-prod.vercel.app/'
   }
 
   const project2: Project = {
@@ -29,7 +30,6 @@ const Projects: FC = () => {
           <ProjectCard project={project1} />
           <ProjectCard project={project2} />
         </div>
-       
       </section>
     </StyledProjects>
   )

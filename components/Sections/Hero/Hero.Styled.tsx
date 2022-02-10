@@ -14,35 +14,6 @@ const StyledHero = styled.div`
     gap: 1rem;
   }
 
-  .greetingTitle {
-    font-size: 3.8rem;
-    color: var(--color1);
-    font-weight: 400;
-
-    @media (max-width: ${({ theme }) => theme.breakpoint.m}) {
-      font-size: 3rem;
-    }
-
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
-      font-size: 2rem;
-    }
-  }
-
-  .ctaTitle {
-    font-size: 8rem;
-    color: var(--color1);
-    font-weight: 700;
-    margin-bottom: 2rem;
-
-    @media (max-width: ${({ theme }) => theme.breakpoint.m}) {
-      font-size: 4.3rem;
-    }
-
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
-      font-size: 3rem;
-    }
-  }
-
   .ctaBtn {
     display: block;
     display: flex;
@@ -57,13 +28,54 @@ const StyledHero = styled.div`
     font-weight: 500;
     width: fit-content;
     user-select: none;
-    background-color: var(--darkPurple);
+    background-color: #048067;
+  }
+
+  .ctaTitle {
+    margin-bottom: 2rem;
+  }
+
+  .header {
+    display: block;
+    font-size: 8rem;
+    color: var(--color1);
+    font-weight: 700;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.m}) {
+      font-size: 7rem;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 6rem;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+      font-size: 4rem;
+    }
   }
 
   .subHeader {
+    display: block;
     font-size: 6rem;
     color: var(--color2);
     font-weight: 500;
+    margin-top: 2rem;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.l}) {
+      font-size: 5.3rem;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.m}) {
+      font-size: 4rem;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 3.2rem;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+      font-size: 2rem;
+    }
   }
   
 `

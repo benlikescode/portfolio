@@ -9,8 +9,7 @@ const Hero: FC = () => {
     <StyledHero>
       <section className="heroContent">
         <h1 className="ctaTitle">
-          <span>Ben Hoeg</span>
-          <br />
+          <span className="header">Ben Hoeg</span>
           <span className="subHeader">Software Developer</span>
         </h1>
       

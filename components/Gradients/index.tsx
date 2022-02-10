@@ -1,0 +1,1 @@
+export { HeroGradient, MiddleGradient, FooterGradient } from './Gradients'

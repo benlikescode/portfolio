@@ -51,7 +51,7 @@ export default function Custom404() {
     <StyledMain>
       <StyledTitle>404</StyledTitle>
       <StyledSubTitle>Page Not Found</StyledSubTitle>
-      <Link href="/">
+      <Link href="/" passHref>
         <HomeButton>Return To Home Page</HomeButton>
       </Link>
     </StyledMain>

@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
 const StyledFooter = styled.div`
-  background-color: #0f070e;
+  background-color: #0e030d;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 2rem;
+  border-top: 1px solid #181818;
 
   footer {
     max-width: ${({ theme }) => theme.breakpoint.l};
@@ -33,11 +34,6 @@ const StyledFooter = styled.div`
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
       font-size: 0.8rem;
     }
-  }
-
-  .socialItem a {
-    height: 20px;
-    width: 20px;
   }
 `
 

@@ -9,23 +9,18 @@ const StyledNavbar = styled.div<StyledProps>`
   position: sticky;
   top: 0;
   z-index: ${({ theme }) => theme.elevation.sticky};
-  font-family: var(--fontFamily2);
   display: flex;
   justify-content: center;
   transition: 0.2s ease-in;
   padding: 0 2rem;
+  font-weight: 500;
+  color: #ddd;
   
   ${({ atTop }) => !atTop && `
     background-color: #361532;
     opacity: 0.98;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.55);
   `}
-
-  .logo {
-    font-size: 1.7rem;
-    font-weight: 400;
-    color: #afa0ff;  
-  }
 
   header {
     max-width: ${({ theme }) => theme.breakpoint.l};
@@ -39,7 +34,6 @@ const StyledNavbar = styled.div<StyledProps>`
     display: flex;
     align-items: center;
     gap: 30px;
-    font-weight: 400;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.m}) {
       gap: 20px;

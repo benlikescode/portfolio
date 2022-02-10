@@ -27,7 +27,6 @@ const StyledInput = styled.div<StyledProps>`
       width: 100%;
       box-sizing: border-box;
       color: var(--color1);
-      outline: none;
       font-size: 1rem;
       font-weight: 400;
       
@@ -46,7 +45,6 @@ const StyledInput = styled.div<StyledProps>`
     width: 100%;
     box-sizing: border-box;
     color: var(--color1);
-    outline: none;
     font-size: 1rem;
     font-weight: 400;
     resize: none;
