@@ -15,12 +15,13 @@ const StyledMain = styled.main`
 
 const StyledTitle = styled.h1`
   color: var(--color1);
-  font-size: clamp(2rem, 20vw, 6rem);
+  font-size: clamp(1.6rem, 15vw, 6rem);
 `
 
 const StyledSubTitle = styled.h2`
   color: var(--color2);
-  font-size: clamp(1.8rem, 10vw, 3rem);
+  font-size: clamp(1.2rem, 5vw, 3rem);
+  margin-top: 1rem;
 `
 
 const HomeButton = styled.button`
