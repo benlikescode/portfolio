@@ -16,7 +16,7 @@ const StyledSidebar = styled.aside<StyledProps>`
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0;
-    background-color: #0d040c;
+    background-color: #180716;
     box-shadow: -10px 0px 30px -15px var(--background3);
     z-index: 9;
     visibility: ${({ menuOpen }) => menuOpen ? 'visible' : 'hidden'};

@@ -19,7 +19,7 @@ const StyledNavbar = styled.div<StyledProps>`
   ${({ atTop }) => !atTop && `
     background-color: #361532;
     opacity: 0.98;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.55);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.55);
   `}
 
   header {
