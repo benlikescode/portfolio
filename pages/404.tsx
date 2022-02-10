@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Head from 'next/head'
 import Link from 'next/link'
 import { Navbar, Footer } from '../components/Sections'
+import { HeroGradient } from '../components/Gradients';
 
 const StyledMain = styled.main`
   min-height: calc(100vh - 68px - 63.59px);
@@ -47,6 +48,7 @@ export default function Custom404() {
     </Head>
 
     <Navbar />
+    <HeroGradient color="#9A000066"/>
 
     <StyledMain>
       <StyledTitle>404</StyledTitle>

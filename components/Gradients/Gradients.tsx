@@ -1,14 +1,18 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 
-const StyledHeroGradient = styled.div`
+type Props = {
+  color?: string;
+}
+
+const StyledHeroGradient = styled.div<Props>`
   width: 100%;
   height: 960px;
   position: absolute;
   top: 0;
   left: 0;
   pointer-events: none;
-  background: radial-gradient(53.09% 53.09% at 50% 37.57%, rgba(160, 37, 153, 0.4) 0%, rgba(18, 19, 24, 0) 100%);
+  background: ${({ color }) => `radial-gradient(53.09% 53.09% at 50% 37.57%, ${color ? color : 'rgba(160, 37, 153, 0.4)'} 0%, rgba(18, 19, 24, 0) 100%)`};
 `
 
 const StyledMiddleGradient = styled.div`
@@ -31,8 +35,8 @@ const StyledFooterGradient = styled.div`
   background: radial-gradient(50% 50% at 50% 50%, rgba(0, 119, 167, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
 `
 
-export const HeroGradient: FC = () => {
-  return <StyledHeroGradient />
+export const HeroGradient: FC<Props> = ({ color }) => {
+  return <StyledHeroGradient color={color} />
 }
 
 export const MiddleGradient: FC = () => {

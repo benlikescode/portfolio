@@ -3,22 +3,24 @@ import Head from 'next/head'
 import { Navbar, Footer } from '../components/Sections'
 import styled from 'styled-components'
 import Link from 'next/link'
+import { HeroGradient } from '../components/Gradients'
 
 const StyledMain = styled.main`
   min-height: calc(100vh - 68px - 63.59px);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 `
 
 const StyledTitle = styled.h1`
   color: var(--color1);
-  font-size: clamp(2rem, 10vw, 4rem);
+  font-size: clamp(2rem, 20vw, 6rem);
 `
 
 const StyledSubTitle = styled.h2`
   color: var(--color2);
-  font-size: clamp(1.5rem, 1vw, 3rem);
+  font-size: clamp(1.8rem, 10vw, 3rem);
 `
 
 const HomeButton = styled.button`
@@ -56,20 +58,18 @@ const ThanksPage: NextPage = () => {
       </Head>
 
       <Navbar />
+      <HeroGradient color="#2553A066"/>
 
       <StyledMain>
-        <StyledBox>
-          <StyledTitle>Thank you!</StyledTitle>
+        <StyledTitle>Thank you!</StyledTitle>
 
-          <StyledSubTitle>Your message has been sent.</StyledSubTitle>
+        <StyledSubTitle>Your message has been sent.</StyledSubTitle>
 
-          <Link href="/">
-            <HomeButton>Return To Home Page</HomeButton>
-          </Link>
-
-        </StyledBox>     
+        <Link href="/" passHref>
+          <HomeButton>Return To Home Page</HomeButton>
+        </Link>       
       </StyledMain>
-       
+      
       <Footer />
     </>
   )
