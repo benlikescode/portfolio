@@ -22,7 +22,7 @@ const StyledMiddleGradient = styled.div`
   top: 80vh;
   left: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(33, 33, 33, 0) 0%, rgba(0, 119, 167, 0.15) 45.31%, rgba(19, 19, 19, 0) 100%);
+  background: linear-gradient(180deg, rgba(33, 33, 33, 0) 0%, rgba(0, 119, 167, 0.10) 45.31%, rgba(19, 19, 19, 0) 100%);
 `
 
 const StyledFooterGradient = styled.div`
@@ -32,7 +32,7 @@ const StyledFooterGradient = styled.div`
   bottom: 0;
   left: -300px;
   pointer-events: none;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 119, 167, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+  background: radial-gradient(50% 50% at 50% 50%,rgb(27 0 111 / 15%) 0%,rgba(0,0,0,0) 100%);
 `
 
 export const HeroGradient: FC<Props> = ({ color }) => {
