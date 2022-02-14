@@ -39,7 +39,7 @@ const StyledProjectCard = styled.div`
   }
 
   .projectDesc {
-    color: var(--color2);
+    color: #b794b8;
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;

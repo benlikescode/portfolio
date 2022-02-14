@@ -6,7 +6,7 @@ const StyledFooter = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 2rem;
-  border-top: 1px solid #181818;
+  border-top: 1px solid #1d0010;
 
   footer {
     max-width: ${({ theme }) => theme.breakpoint.l};
@@ -29,7 +29,7 @@ const StyledFooter = styled.div`
 
   .footerText {
     font-size: 1rem;
-    color: var(--color2);
+    color: #945f8c;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
       font-size: 0.8rem;

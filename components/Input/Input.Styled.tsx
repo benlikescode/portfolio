@@ -11,7 +11,7 @@ const StyledInput = styled.div<StyledProps>`
     font-weight: 500;
     margin-bottom: 6px;
     display: block;
-    color: var(--color2);
+    color: #945f8c;
   }
 
   .input-styled {

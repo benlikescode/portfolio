@@ -57,7 +57,7 @@ const StyledHero = styled.div`
   .subHeader {
     display: block;
     font-size: 6rem;
-    color: var(--color2);
+    color: #c590b5;
     font-weight: 500;
     margin-top: 2rem;
 

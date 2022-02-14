@@ -42,6 +42,7 @@ const StyledAbout = styled.div`
     color: var(--color3);
     font-size: 26px;
     line-height: 40px;
+    max-width: 80%;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
       font-size: 18px;
