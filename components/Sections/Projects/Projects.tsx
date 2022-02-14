@@ -9,7 +9,7 @@ const Projects: FC = () => {
     name: 'GeoHub',
     imageUrl: '/images/GeoHub.png',
     description: 'The main game mode is based on the popular game Geoguessr, where you have to guess where you are in the world after being placed in a random location.',
-    tags: ['NextJS', 'TypeScript', 'MongoDB', 'Google Maps API'],
+    tags: ['NextJS', 'TypeScript', 'MongoDB', 'Maps API'],
     githubLink: 'https://github.com/benlikescode/geohub',
     liveLink: 'https://geohub-prod.vercel.app/'
   }
@@ -17,7 +17,7 @@ const Projects: FC = () => {
   const project2: Project = {
     name: 'Discord Clone',
     imageUrl: '/images/Bencord.png',
-    description: 'A frontend clone of discord with many features such as realtime messaging, creating servers, inviting friends, banning, roles, and basic voice chat functionality.',
+    description: 'A frontend clone of discord with many features such as realtime messaging, creating servers, inviting friends, banning, and basic voice chat functionality.',
     tags: ['React', 'TypeScript', 'Firebase', 'Redux'],
     githubLink: 'https://github.com/benlikescode/discord'
   }
