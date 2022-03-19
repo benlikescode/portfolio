@@ -28,14 +28,17 @@ const StyledProjectCard = styled.div`
   .titleRow {
     display: flex;
     align-items: center;
-    gap: 15px;
   }
 
   .projectLinks {
     display: flex;
     align-items: center;
-    gap: 8px;
     margin-top: -3px;
+    margin-left: 15px;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
   }
 
   .projectDesc {

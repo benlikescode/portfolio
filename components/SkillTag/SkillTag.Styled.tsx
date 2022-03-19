@@ -3,7 +3,6 @@ import styled from 'styled-components'
 const StyledSkillTag = styled.li`
   display: flex;
   align-items: center;
-  gap: 7px;
   padding: 8px;
   width: fit-content;
   border: 1px solid rgba(255, 255, 255, 0.13);
@@ -48,6 +47,7 @@ const StyledSkillTag = styled.li`
   .skillTagLabel {
     color: var(--color1);
     font-size: 1rem;
+    margin-left: 7px;
   }
 `
 

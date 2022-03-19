@@ -36,12 +36,12 @@ const StyledContact = styled.div`
   }
 
   .topInputs {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
-
+    
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
-      flex-direction: column;
+      grid-template-columns: 1fr;
       gap: 1.5rem;
     }
   }
@@ -77,7 +77,6 @@ const StyledContact = styled.div`
   .contactItem {
     display: flex;
     align-items: center;
-    gap: 10px;
   }
 
   .contactIcon {
@@ -88,6 +87,7 @@ const StyledContact = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 10px;
   }
 `
 
