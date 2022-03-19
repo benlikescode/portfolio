@@ -1,27 +1,14 @@
 import styled from 'styled-components'
 
-type StyledProps = {
-  atTop?: boolean;
-}
-
-const StyledNavbar = styled.div<StyledProps>`
-  height: 68px;
-  position: sticky;
-  top: 0;
-  z-index: ${({ theme }) => theme.elevation.sticky};
+const StyledNavbar = styled.div`
+  height: 100px;
   display: flex;
   justify-content: center;
   transition: 0.2s ease-in;
-  padding: 0 2rem;
+  padding: 0 1.25rem;
   font-weight: 500;
   color: #ddd;
   
-  ${({ atTop }) => !atTop && `
-    background-color: #361532;
-    opacity: 0.98;
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.55);
-  `}
-
   header {
     max-width: ${({ theme }) => theme.breakpoint.l};
     width: 100%;
@@ -53,7 +40,7 @@ const StyledNavbar = styled.div<StyledProps>`
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    border: 2px solid #a8207b;
+    border: 2px solid #888aff;
     display: flex;
     align-items: center;
     justify-content: center;

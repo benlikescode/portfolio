@@ -12,17 +12,17 @@ const StyledHeroGradient = styled.div<Props>`
   top: 0;
   left: 0;
   pointer-events: none;
-  background: ${({ color }) => `radial-gradient(53.09% 53.09% at 50% 37.57%, ${color ? color : 'rgba(160, 37, 153, 0.4)'} 0%, rgba(18, 19, 24, 0) 100%)`};
+  background: ${({ color }) => `radial-gradient(53.09% 53.09% at 50% 37.57%, ${color ? color : 'rgba(59, 37, 160, 0.4)'} 0%, rgba(18, 19, 24, 0) 100%)`};
 `
 
 const StyledMiddleGradient = styled.div`
   width: 100%;
-  height: 960px;
+  height: 600px;
   position: absolute;
-  top: 80vh;
+  top: 165vh;
   left: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(33, 33, 33, 0) 0%, rgba(0, 119, 167, 0.10) 45.31%, rgba(19, 19, 19, 0) 100%);
+  background: linear-gradient(180deg, rgba(33, 33, 33, 0) 0%, #ffa13616 45.31%, rgba(19, 19, 19, 0) 100%);
 `
 
 const StyledFooterGradient = styled.div`

@@ -4,12 +4,15 @@ const StyledAbout = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem;
-
+  padding: 0 1.25rem;
+  background: rgb(11 11 11);
+  border-bottom: 1px solid #202020;
+  border-top: 1px solid #202020;
+  
   .about {
     max-width: ${({ theme }) => theme.breakpoint.l};
     width: 100%;
-    padding: 5rem 0;
+    padding: 3rem 0;
   }
 
   .skillRow {
@@ -35,18 +38,19 @@ const StyledAbout = styled.div`
   h3 { 
     font-size: 20px;
     font-weight: 500;
-    color: #D0D0D0;
+    color: #ffffff;
   }
 
   .aboutText {
-    color: var(--color3);
-    font-size: 26px;
-    line-height: 40px;
+    color: #aaaaaa;
+    font-size: 22px;
+    line-height: 32px;
     max-width: 80%;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
       font-size: 18px;
       line-height: 24px;
+      max-width: 100%;
     }
   }
 

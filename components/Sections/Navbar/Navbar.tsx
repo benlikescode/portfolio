@@ -1,25 +1,11 @@
-import { FC, useEffect, useState } from 'react'
+import { FC } from 'react'
 import { StyledNavbar } from '.'
 import { Menu } from '../../Menu'
 import Link from 'next/link'
 
 const Navbar: FC = () => {
-  const [atTop, setAtTop] = useState(true)
-
-  const handleScroll = () => {
-    setAtTop(window.scrollY < 68)
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
-  
   return (
-    <StyledNavbar atTop={atTop}>
+    <StyledNavbar>
       <header>
         <Link href="/">
           <a>

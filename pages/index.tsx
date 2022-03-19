@@ -18,12 +18,10 @@ const Home: NextPage = () => {
       <main>
         <Hero />
         <About />
-        <MiddleGradient />
-        <Projects />     
+        <Projects />   
         <Contact />
       </main>
 
-      <FooterGradient />
       <Footer />
     </>
   )

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledProjectCard = styled.div`
-  background-color: #180b16;
+  background-color: rgb(15, 15, 15);
   border-radius: 10px;
   padding: 22px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -39,7 +39,7 @@ const StyledProjectCard = styled.div`
   }
 
   .projectDesc {
-    color: #b794b8;
+    color: #dddddd;
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
@@ -53,12 +53,8 @@ const StyledProjectCard = styled.div`
   .techTags {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 10px;
     flex-wrap: wrap;
-
-    @media (max-width: ${({ theme }) => theme.breakpoint.m}) {
-      gap: 10px;
-    }
   }
 
   .techTag {

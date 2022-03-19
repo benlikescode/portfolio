@@ -1,17 +1,18 @@
 import styled from 'styled-components'
 
 const StyledHero = styled.div`
-  height: calc(100vh - 68px - 250px);
+  height: calc(100vh - 100px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem;
+  padding: 0 1.25rem;
 
   .heroContent {
     max-width: ${({ theme }) => theme.breakpoint.l};
     width: 100%;
     display: grid;
     gap: 1rem;
+    margin-top: -8rem;
   }
 
   .ctaBtn {
@@ -28,7 +29,7 @@ const StyledHero = styled.div`
     font-weight: 500;
     width: fit-content;
     user-select: none;
-    background-color: #048067;
+    background-color: #0070f3;
   }
 
   .ctaTitle {
@@ -50,14 +51,14 @@ const StyledHero = styled.div`
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
-      font-size: 4rem;
+      font-size: 4.2rem;
     }
   }
 
   .subHeader {
     display: block;
     font-size: 6rem;
-    color: #c590b5;
+    color: #9296b5;
     font-weight: 500;
     margin-top: 2rem;
 
@@ -74,7 +75,7 @@ const StyledHero = styled.div`
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
   }
   

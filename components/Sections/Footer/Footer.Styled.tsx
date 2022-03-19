@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
 const StyledFooter = styled.div`
-  background-color: #0e030d;
+  background-color: #070707;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem;
-  border-top: 1px solid #1d0010;
+  padding: 0 1.25rem;
+  border-top: 1px solid #141414;
 
   footer {
     max-width: ${({ theme }) => theme.breakpoint.l};
@@ -29,7 +29,7 @@ const StyledFooter = styled.div`
 
   .footerText {
     font-size: 1rem;
-    color: #945f8c;
+    color: #888;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
       font-size: 0.8rem;

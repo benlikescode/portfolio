@@ -4,7 +4,7 @@ const StyledSkillTag = styled.li`
   display: flex;
   align-items: center;
   gap: 7px;
-  padding: 8px 12px 8px 8px;
+  padding: 8px;
   width: fit-content;
   border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 8px;

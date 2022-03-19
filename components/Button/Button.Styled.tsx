@@ -30,12 +30,12 @@ const StyledButton = styled.div<StyledProps>`
     ${({ type, isDisabled }) => 
       type === 'solid' && 
       !isDisabled && `
-        background-color: #054639;
+        background-color: #0070f3;
         color: #fff;
         border: 1px solid rgba(255, 255, 255, 0.05);
 
         :hover {
-          background-color: #048067;
+          background-color: #004797;
         }
     `}
    

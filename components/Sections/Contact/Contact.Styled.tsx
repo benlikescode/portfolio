@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
 const StyledContact = styled.div`
-  background-color: #0d040c;
+  background-color: #090909;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem;
+  padding: 0 1.25rem;
+  border-top: 1px solid #202020;
 
   .contactSection {
     max-width: ${({ theme }) => theme.breakpoint.l};
@@ -54,8 +55,8 @@ const StyledContact = styled.div`
   }
 
   .contactText {
-    color: var(--color3);
-    font-size: 26px;
+    color: #9b9b9b;
+    font-size: 22px;
     max-width: 450px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
@@ -82,7 +83,7 @@ const StyledContact = styled.div`
   .contactIcon {
     height: 40px;
     width: 40px;
-    background-color: #052d25;
+    background-color: #0070f3;
     border-radius: 50%;
     display: flex;
     align-items: center;

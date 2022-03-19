@@ -28,8 +28,8 @@ const About: FC = () => {
             <ul className="skillRow">
               <SkillTag label="React" icon={<ReactIcon />}/>
               <SkillTag label="TypeScript" icon={<TSIcon />}/>
-              <SkillTag label="NextJS" icon={<NextIcon />}/>
-              <SkillTag label="NodeJS" icon={<NodeIcon />}/>
+              <SkillTag label="Node" icon={<NodeIcon />}/>
+              <SkillTag label="Next" icon={<NextIcon />}/>
               <SkillTag label="Redux" icon={<ReduxIcon />}/>
               <SkillTag label="MongoDB" icon={<MongoIcon />}/>
             </ul>       
@@ -40,7 +40,6 @@ const About: FC = () => {
             <ul className="skillRow">
               <SkillTag label="Slack" icon={<SlackIcon />}/>
               <SkillTag label="Github" icon={<GithubIcon />}/>
-              <SkillTag label="Jira" icon={<JiraIcon />}/>
               <SkillTag label="Figma" icon={<FigmaIcon />}/>       
             </ul>       
           </div>
