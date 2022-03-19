@@ -8,6 +8,12 @@ const StyledSkillTag = styled.li`
   border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.09);
+
+  @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
   
   .iconWrapper {
     background-color: #fff;

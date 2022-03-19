@@ -33,11 +33,16 @@ const StyledProjectCard = styled.div`
   .projectLinks {
     display: flex;
     align-items: center;
+    gap: 8px;
     margin-top: -3px;
     margin-left: 15px;
+  }
 
-    &:not(:last-child) {
-      margin-right: 8px;
+  .projectLinkItem {
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
     }
   }
 
@@ -72,6 +77,12 @@ const StyledProjectCard = styled.div`
 
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
       font-size: 0.8rem;
+    }
+
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }   
     }
   }
 `

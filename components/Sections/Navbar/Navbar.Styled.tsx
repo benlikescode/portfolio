@@ -29,6 +29,22 @@ const StyledNavbar = styled.div`
     @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
       display: none;
     }
+
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+      li {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+
+      @media (max-width: ${({ theme }) => theme.breakpoint.m}) {
+        li {
+          &:not(:last-child) {
+            margin-right: 20px;
+          }
+        }
+      } 
+    }
   }
 
   .navLink {

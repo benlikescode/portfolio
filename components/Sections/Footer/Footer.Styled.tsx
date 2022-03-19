@@ -27,6 +27,18 @@ const StyledFooter = styled.div`
     }
   }
 
+  .socialItem {
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+      &:not(:last-child) {
+        margin-right: 23px;
+      }
+
+      @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
   .footerText {
     font-size: 1rem;
     color: #888;

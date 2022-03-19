@@ -10,19 +10,19 @@ const Footer: FC = () => {
         <span className="footerText">&copy; Ben Hoeg {new Date().getFullYear().toString()}</span>
 
         <div className="socials">
-          <a href="https://www.linkedin.com/in/benhoeg/" target="_blank" rel="noreferrer">
+          <a className="socialItem" href="https://www.linkedin.com/in/benhoeg/" target="_blank" rel="noreferrer">
             <Icon size={20} fill="var(--color3)">
               <LinkedInIcon />
             </Icon>
           </a>
             
-          <a href="https://github.com/benlikescode" target="_blank" rel="noreferrer">
+          <a className="socialItem" href="https://github.com/benlikescode" target="_blank" rel="noreferrer">
             <Icon size={20} fill="var(--color3)">
               <GithubIcon />
             </Icon>
           </a>
                 
-          <a href="https://twitter.com/benlikescode" target="_blank" rel="noreferrer">
+          <a className="socialItem" href="https://twitter.com/benlikescode" target="_blank" rel="noreferrer">
             <Icon size={20} fill="var(--color3)">
               <TwitterIcon />
             </Icon>          

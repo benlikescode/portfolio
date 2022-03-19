@@ -23,7 +23,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
           <h4>{project.name}</h4>
           <div className="projectLinks">
             {project.githubLink && (
-              <a href={project.githubLink} target="_blank" rel="noreferrer">
+              <a className="projectLinkItem" href={project.githubLink} target="_blank" rel="noreferrer">
                 <Icon size={22}>
                   <GithubIcon />
                 </Icon>
@@ -31,7 +31,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
             )}
            
             {project.liveLink && (
-              <a href={project.liveLink} target="_blank" rel="noreferrer">
+              <a className="projectLinkItem" href={project.liveLink} target="_blank" rel="noreferrer">
                 <Icon size={26}>
                   <ExternalLinkIcon />
                 </Icon>
