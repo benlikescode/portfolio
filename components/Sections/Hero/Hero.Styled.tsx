@@ -21,7 +21,6 @@ const StyledHero = styled.div`
     position: relative;
     align-items: center;
     justify-content: center;
-    gap: 8px;
     border-radius: 5px;
     height: 42px;
     padding: 0 25px;
@@ -30,6 +29,10 @@ const StyledHero = styled.div`
     width: fit-content;
     user-select: none;
     background-color: #0070f3;
+
+    span {
+      margin-right: 8px;
+    }
   }
 
   .ctaTitle {
