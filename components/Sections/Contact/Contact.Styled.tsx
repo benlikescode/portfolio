@@ -9,13 +9,13 @@ const StyledContact = styled.div`
   border-top: 1px solid #202020;
 
   .contactSection {
-    max-width: ${({ theme }) => theme.breakpoint.l};
+    max-width: 1000px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 4rem 0;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       flex-direction: column;
       gap: 4rem;
     }
@@ -26,11 +26,11 @@ const StyledContact = styled.div`
     display: grid;
     gap: 1.5rem;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.m}) {
+    @media (max-width: 900px) {
       width: 350px;
     }
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       width: 100%;
     }
   }
@@ -40,7 +40,7 @@ const StyledContact = styled.div`
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       grid-template-columns: 1fr;
       gap: 1.5rem;
     }
@@ -49,7 +49,7 @@ const StyledContact = styled.div`
   h2 {
     font-size: 2.5rem;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       font-size: 1.6rem;
     }
   }
@@ -59,7 +59,7 @@ const StyledContact = styled.div`
     font-size: 22px;
     max-width: 450px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       font-size: 18px;
     }
   }
@@ -69,7 +69,7 @@ const StyledContact = styled.div`
     gap: 1.5rem;
     margin-top: 4rem;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       margin-top: 2rem;
     }
   }
@@ -82,7 +82,7 @@ const StyledContact = styled.div`
   .contactIcon {
     height: 40px;
     width: 40px;
-    background-color: #0070f3;
+    background-color: ${({ theme }) => theme.color.primary};
     border-radius: 50%;
     display: flex;
     align-items: center;

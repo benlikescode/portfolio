@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { createRef, FC, useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 type Props = {
@@ -6,13 +6,13 @@ type Props = {
 }
 
 const StyledHeroGradient = styled.div<Props>`
-  width: 100%;
-  height: 960px;
+  width: 90vw;
+  height: 90vw;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -1900;
+  left: -1900;
   pointer-events: none;
-  background: ${({ color }) => `radial-gradient(53.09% 53.09% at 50% 37.57%, ${color ? color : 'rgba(59, 37, 160, 0.4)'} 0%, rgba(18, 19, 24, 0) 100%)`};
+  background: ${({ theme }) => `radial-gradient(circle closest-side, ${theme.color.gradient}, rgba(18, 19, 24, 0))`};
 `
 
 const StyledMiddleGradient = styled.div`
@@ -32,11 +32,43 @@ const StyledFooterGradient = styled.div`
   bottom: 0;
   left: -300px;
   pointer-events: none;
-  background: radial-gradient(50% 50% at 50% 50%,rgb(27 0 111 / 15%) 0%,rgba(0,0,0,0) 100%);
+  background: radial-gradient(50% 50% at 50% 50%, rgb(27 0 111 / 15%) 0%, rgba(0, 0, 0, 0) 100%);
 `
 
 export const HeroGradient: FC<Props> = ({ color }) => {
-  return <StyledHeroGradient color={color} />
+  const gradientRef = createRef<HTMLDivElement>()
+
+  const handleMouseMove = (e: MouseEvent) => {
+    if (!gradientRef || !gradientRef.current) {
+      return
+    }
+
+
+    const x = e.pageX
+    const y = e.pageY
+    const gradient = gradientRef.current
+    const grWidth = gradient.clientWidth
+    const grHeight = gradient.clientHeight
+
+    const grX = x - (grWidth / 2)
+    const grY = y - (grHeight / 2)
+
+    setTimeout(() => {
+      gradient.style.top = `${grY}px`
+      gradient.style.left = `${grX}px`
+    }, 200)
+  }
+
+  useEffect(() => {
+    window.addEventListener('mousemove', handleMouseMove)
+  
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove)
+    }
+  }, [gradientRef])
+  
+
+  return <StyledHeroGradient color={color} ref={gradientRef}/>
 }
 
 export const MiddleGradient: FC = () => {

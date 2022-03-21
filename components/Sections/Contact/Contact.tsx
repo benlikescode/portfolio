@@ -59,7 +59,7 @@ const Contact: FC = () => {
             isTextArea 
             isRequired
           />
-          <Button type="solid" width="100%">Send Message</Button>
+          <Button buttonType="solid" width="100%">Send Message</Button>
         </form>
       </section>
     </StyledContact>

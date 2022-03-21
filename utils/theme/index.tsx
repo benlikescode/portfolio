@@ -1,11 +1,3 @@
-import { elevation } from './elevation'
-import { breakpoint } from './breakpoint'
-import { color } from './color'
-
-export const theme = {
-  color,
-  elevation,
-  breakpoint
-}
-
-export type Theme = typeof theme
+export { breakpoint } from './breakpoint'
+export { redTheme, blueTheme, purpleTheme, greenTheme, tealTheme } from './color'
+export { elevation } from './elevation'

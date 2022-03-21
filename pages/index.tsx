@@ -13,7 +13,6 @@ const Home: NextPage = () => {
       </Head>
 
       <Navbar />
-      <HeroGradient />
 
       <main>
         <Hero />

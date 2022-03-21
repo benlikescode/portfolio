@@ -10,7 +10,7 @@ const StyledAbout = styled.div`
   border-top: 1px solid #202020;
   
   .about {
-    max-width: ${({ theme }) => theme.breakpoint.l};
+    max-width: 1000px;
     width: 100%;
     padding: 3rem 0;
   }
@@ -22,7 +22,7 @@ const StyledAbout = styled.div`
     flex-wrap: wrap;
     margin-top: 10px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       font-size: 1.4rem;
     }
   }
@@ -30,7 +30,7 @@ const StyledAbout = styled.div`
   h2 {
     font-size: 2.5rem;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       font-size: 1.6rem;
     }
   }
@@ -47,7 +47,7 @@ const StyledAbout = styled.div`
     line-height: 32px;
     max-width: 80%;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       font-size: 18px;
       line-height: 24px;
       max-width: 100%;
@@ -59,7 +59,6 @@ const StyledAbout = styled.div`
     display: grid;
     gap: 2rem;
   }
-  
 `
 
 export default StyledAbout

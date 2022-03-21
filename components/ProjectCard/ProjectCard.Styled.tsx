@@ -20,7 +20,7 @@ const StyledProjectCard = styled.div`
     font-size: 26px;
     font-weight: 600;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       font-size: 20px;
     }
   }
@@ -52,7 +52,7 @@ const StyledProjectCard = styled.div`
     font-weight: 400;
     line-height: 27px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       font-size: 1rem;
       line-height: 24px;
     }
@@ -75,7 +75,7 @@ const StyledProjectCard = styled.div`
     justify-content: center;
     font-size: 1rem;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       font-size: 0.8rem;
     }
 

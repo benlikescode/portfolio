@@ -49,7 +49,6 @@ const StyledSidebar = styled.aside<StyledProps>`
       width: 100%;
     }
   }
-  
 `
 
 export default StyledSidebar

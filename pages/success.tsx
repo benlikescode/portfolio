@@ -4,13 +4,20 @@ import { Navbar, Footer } from '../components/Sections'
 import styled from 'styled-components'
 import Link from 'next/link'
 import { HeroGradient } from '../components/Gradients'
+import { Icon } from '../components/Icon'
+import { ArrowNarrowRightIcon } from '@heroicons/react/solid'
 
 const StyledMain = styled.main`
-  min-height: calc(100vh - 68px - 63.59px);
+  height: calc(100vh - 63.59px);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 1.25rem;
+  position: relative;
+  overflow: hidden;
+  margin-top: -100px;
+  padding-top: 100px;
 `
 
 const StyledTitle = styled.h1`
@@ -19,7 +26,7 @@ const StyledTitle = styled.h1`
 `
 
 const StyledSubTitle = styled.h2`
-  color: var(--color2);
+  color: ${({ theme }) => theme.color.light};
   font-size: clamp(1.2rem, 5vw, 3rem);
   margin-top: 1rem;
 `
@@ -35,20 +42,14 @@ const HomeButton = styled.button`
   font-weight: 500;
   width: 100%;
   user-select: none;
-  background-color: transparent;
-  border: 1px solid var(--borderColor);
+  background-color: ${({ theme }) => theme.color.primary};
   width: fit-content;
   color: var(--color1);
   margin-top: 2rem;
-`
 
-const StyledBox = styled.div`
-  border: 1px solid var(--borderColor);
-  padding: 2rem 4rem;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  span {
+    margin-right: 8px;
+  }
 `
 
 const ThanksPage: NextPage = () => {
@@ -59,15 +60,20 @@ const ThanksPage: NextPage = () => {
       </Head>
 
       <Navbar />
-      <HeroGradient color="#2553A066"/>
 
       <StyledMain>
-        <StyledTitle>Thank you!</StyledTitle>
+        <HeroGradient />
 
+        <StyledTitle>Thank you!</StyledTitle>
         <StyledSubTitle>Your message has been sent.</StyledSubTitle>
 
         <Link href="/" passHref>
-          <HomeButton>Return To Home Page</HomeButton>
+          <HomeButton>
+            <span>Return To Home Page</span>
+            <Icon size={24} fill="#fff">
+              <ArrowNarrowRightIcon />
+            </Icon>
+          </HomeButton>
         </Link>       
       </StyledMain>
       

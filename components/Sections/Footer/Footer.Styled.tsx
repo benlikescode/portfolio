@@ -9,7 +9,7 @@ const StyledFooter = styled.div`
   border-top: 1px solid #141414;
 
   footer {
-    max-width: ${({ theme }) => theme.breakpoint.l};
+    max-width: 1000px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@ const StyledFooter = styled.div`
     align-items: center;
     gap: 23px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       gap: 1rem;
     }
   }
@@ -33,7 +33,7 @@ const StyledFooter = styled.div`
         margin-right: 23px;
       }
 
-      @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+      @media (max-width: 600px) {
         margin-right: 1rem;
       }
     }
@@ -43,7 +43,7 @@ const StyledFooter = styled.div`
     font-size: 1rem;
     color: #888;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       font-size: 0.8rem;
     }
   }

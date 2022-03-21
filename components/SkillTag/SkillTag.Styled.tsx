@@ -25,7 +25,7 @@ const StyledSkillTag = styled.li`
     justify-content: center;
     padding: 5px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       height: 25px;
       width: 25px;
     }

@@ -1,9 +1,12 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { StyledNavbar } from '.'
 import { Menu } from '../../Menu'
 import Link from 'next/link'
+import { Select } from '../../Select'
 
 const Navbar: FC = () => {
+  const THEME_OPTIONS = ['Blue', 'Red', 'Purple', 'Green', 'Teal']
+
   return (
     <StyledNavbar>
       <header>
@@ -35,7 +38,11 @@ const Navbar: FC = () => {
               <Link href="/#contact">
                 <a className="navLink">Contact Me</a>          
               </Link>
-            </li>       
+            </li>   
+
+            <li>
+              <Select options={THEME_OPTIONS} />
+            </li>    
           </ul>
 
           <Menu />

@@ -1,14 +1,34 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
-import { theme } from '../utils/theme'
+import { breakpoint, elevation } from '../utils/theme'
+import { FC, useContext } from 'react'
+import { ColorProvider, colorStore } from '../components/ColorContext'
+import { Global } from '../styles/globals'
 
-function MyApp({ Component, pageProps }: AppProps) {
+const appContainer = ({ ...rest }: AppProps) => {
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <ColorProvider>
+      <App {...rest}/>
+    </ColorProvider>
   )
 }
 
-export default MyApp
+export default appContainer
+
+const App: FC<AppProps> = ({ Component, pageProps }) => {
+  const { colorTheme } = useContext(colorStore)
+
+  const theme = {
+    color: colorTheme, 
+    breakpoint,
+    elevation
+  }
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Global />
+      <Component {...pageProps}/>
+    </ThemeProvider>
+  )
+}

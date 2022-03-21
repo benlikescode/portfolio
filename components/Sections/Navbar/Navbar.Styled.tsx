@@ -8,9 +8,13 @@ const StyledNavbar = styled.div`
   padding: 0 1.25rem;
   font-weight: 500;
   color: #ddd;
+  z-index: 999;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.05);
+  //backdrop-filter: saturate(180%) blur(10px);
   
   header {
-    max-width: ${({ theme }) => theme.breakpoint.l};
+    max-width: 1000px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -22,11 +26,11 @@ const StyledNavbar = styled.div`
     align-items: center;
     gap: 30px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.m}) {
+    @media (max-width: 900px) {
       gap: 20px;
     }  
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    @media (max-width: 600px) {
       display: none;
     }
 
@@ -37,7 +41,7 @@ const StyledNavbar = styled.div`
         }
       }
 
-      @media (max-width: ${({ theme }) => theme.breakpoint.m}) {
+      @media (max-width: 900px) {
         li {
           &:not(:last-child) {
             margin-right: 20px;
@@ -56,7 +60,7 @@ const StyledNavbar = styled.div`
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    border: 2px solid #888aff;
+    border: 2px solid ${({ theme }) => theme.color.avatar};
     display: flex;
     align-items: center;
     justify-content: center;
