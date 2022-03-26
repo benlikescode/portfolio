@@ -12,7 +12,8 @@ const StyledSkillTag = styled.li<StyledProps>`
   width: fit-content;
   border-radius: 0.5rem;
   background-color: rgb(255 197 166 / 10%);
-
+  margin-top: 10px;
+  
   :hover {
     background-color: rgb(220 180 150 / 10%);
   }

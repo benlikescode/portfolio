@@ -20,7 +20,6 @@ const StyledAbout = styled.div`
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
-    margin-top: 10px;
 
     @media (max-width: 600px) {
       font-size: 1.4rem;
@@ -40,11 +39,11 @@ const StyledAbout = styled.div`
   h3 { 
     font-size: 20px;
     font-weight: 500;
-    color: #ffffff;
+    color: #fff;
   }
 
   .aboutText {
-    color: #aaaaaa;
+    color: #aaa;
     font-size: 22px;
     line-height: 32px;
     max-width: 80%;

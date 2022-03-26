@@ -28,7 +28,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
         
           {project.liveLink && (
             <a className="projectLinkItem" href={project.liveLink} target="_blank" rel="noreferrer">
-              <Icon size={26}>
+              <Icon size={26} fill="#626262">
                 <ExternalLinkIcon />
               </Icon>
               <span className="linkLabel">Website</span>

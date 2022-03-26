@@ -5,17 +5,14 @@ import {
   FigmaIcon, 
   JiraIcon, 
   MongoIcon, 
-  MySQLIcon, 
   NextIcon, 
   NodeIcon, 
-  NotionIcon, 
   ReactIcon, 
   ReduxIcon, 
   SlackIcon, 
-  TSIcon 
+  TSIcon,
+  GithubIcon
 } from '../../Icon'
-
-import { GithubIcon } from '../../Icon/Socials'
 
 const About: FC = () => {
   return (

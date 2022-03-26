@@ -21,7 +21,11 @@ const StyledProjectCard = styled.div`
     max-width: 30rem;
 
     @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-      margin-right: 5rem;
+      margin-bottom: 5rem;
+
+      @media (min-width: 950px) {
+        margin-right: 5rem;
+      }
     }
   }
 
