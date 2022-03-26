@@ -23,6 +23,11 @@ const StyledSkillTag = styled.li<StyledProps>`
       margin-right: 10px;
     }
   }
+
+  @media (max-width: 600px) {
+    padding: 0.5rem;
+    padding-right: 0.875rem;
+  }
   
   .iconWrapper {
     border-radius: 5px;
