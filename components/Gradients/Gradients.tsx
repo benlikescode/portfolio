@@ -39,10 +39,9 @@ export const HeroGradient: FC<Props> = ({ color }) => {
   const gradientRef = createRef<HTMLDivElement>()
 
   const handleMouseMove = (e: MouseEvent) => {
-    if (!gradientRef || !gradientRef.current) {
+    if (!gradientRef || !gradientRef.current || e.pageY > window.innerHeight) {
       return
     }
-
 
     const x = e.pageX
     const y = e.pageY
