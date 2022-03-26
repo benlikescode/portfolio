@@ -9,11 +9,12 @@ const StyledContact = styled.div`
   border-top: 1px solid #202020;
 
   .contactSection {
-    max-width: 1000px;
+    max-width: 1160px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 4rem 0;
+    gap: 3rem;
 
     @media (max-width: 600px) {
       flex-direction: column;
@@ -22,9 +23,10 @@ const StyledContact = styled.div`
   }
 
   .contactForm {
-    width: 500px;
+    width: 550px;
     display: grid;
     gap: 1.5rem;
+    margin-top: 1.5rem;
 
     @media (max-width: 900px) {
       width: 350px;
@@ -32,6 +34,7 @@ const StyledContact = styled.div`
 
     @media (max-width: 600px) {
       width: 100%;
+      margin-top: 0;
     }
   }
 
@@ -40,17 +43,19 @@ const StyledContact = styled.div`
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       grid-template-columns: 1fr;
       gap: 1.5rem;
     }
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-family: var(--headerFont);
+    font-weight: 600;
 
     @media (max-width: 600px) {
-      font-size: 1.6rem;
+      font-size: 2.25rem;
     }
   }
 
@@ -58,8 +63,9 @@ const StyledContact = styled.div`
     color: #9b9b9b;
     font-size: 22px;
     max-width: 450px;
-
-    @media (max-width: 600px) {
+    margin-top: 1rem;
+    
+    @media (max-width: 800px) {
       font-size: 18px;
     }
   }

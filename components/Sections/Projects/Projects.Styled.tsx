@@ -7,28 +7,27 @@ const StyledProjects = styled.div`
   padding: 0 1.25rem;
 
   .projectsSection {
-    max-width: 1000px;
+    max-width: 1160px;
     width: 100%;
     padding: 5rem 0 10rem 0;
   }
 
   .projectCards {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 2rem;
+    margin-top: 6rem;
 
     @media (max-width: 600px) {
-      grid-template-columns: 1fr;
-
+      margin-top: 4rem;
     }
   }
 
+
   h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-family: var(--headerFont);
+    font-weight: 600;
 
     @media (max-width: 600px) {
-      font-size: 1.6rem;
+      font-size: 2.25rem;
     }
   }
 `

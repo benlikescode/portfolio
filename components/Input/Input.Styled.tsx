@@ -33,7 +33,6 @@ const StyledInput = styled.div<StyledProps>`
       ::placeholder {
         color: var(--color1);
       }
- 
     }
   }
 

@@ -10,7 +10,7 @@ const StyledAbout = styled.div`
   border-top: 1px solid #202020;
   
   .about {
-    max-width: 1000px;
+    max-width: 1160px;
     width: 100%;
     padding: 3rem 0;
   }
@@ -28,10 +28,12 @@ const StyledAbout = styled.div`
   }
 
   h2 {
-    font-size: 2.5rem;
-
+    font-size: 3rem;
+    font-family: var(--headerFont);
+    font-weight: 600;
+    
     @media (max-width: 600px) {
-      font-size: 1.6rem;
+      font-size: 2.25rem;
     }
   }
 
@@ -46,6 +48,7 @@ const StyledAbout = styled.div`
     font-size: 22px;
     line-height: 32px;
     max-width: 80%;
+    margin-top: 1rem;
 
     @media (max-width: 600px) {
       font-size: 18px;

@@ -9,7 +9,7 @@ const StyledFooter = styled.div`
   border-top: 1px solid #141414;
 
   footer {
-    max-width: 1000px;
+    max-width: 1160px;
     width: 100%;
     display: flex;
     align-items: center;

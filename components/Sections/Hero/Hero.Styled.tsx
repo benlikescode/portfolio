@@ -58,6 +58,7 @@ const StyledHero = styled.div`
 
   .ctaTitle {
     margin-bottom: 2rem;
+    font-family: var(--headerFont);
   }
 
   .header {
@@ -86,7 +87,7 @@ const StyledHero = styled.div`
     font-weight: 500;
     margin-top: 2rem;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1160px) {
       font-size: 5.3rem;
     }
 

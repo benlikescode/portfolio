@@ -25,7 +25,7 @@ const Menu: FC = () => {
     <StyledMenu menuOpen={menuOpen}>
       <div className="menuWrapper" ref={wrapperRef}>
         <Button buttonType="icon" onClick={() => toggleMenu()} className="hamburgerBtn">
-          <Icon size={24} fill="#fff">
+          <Icon size={30} fill="#fff">
             {menuOpen ? <XIcon /> : <MenuIcon />}         
           </Icon>
         </Button>

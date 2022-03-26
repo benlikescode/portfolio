@@ -1,13 +1,21 @@
 import styled from 'styled-components'
 
-const StyledSkillTag = styled.li`
+type StyledProps = {
+  lessGap?: boolean;
+}
+
+const StyledSkillTag = styled.li<StyledProps>`
   display: flex;
   align-items: center;
-  padding: 8px;
+  padding: 0.875rem;
+  padding-right: 1.5rem;
   width: fit-content;
-  border: 1px solid rgba(255, 255, 255, 0.13);
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.09);
+  border-radius: 0.5rem;
+  background-color: rgb(255 197 166 / 10%);
+
+  :hover {
+    background-color: rgb(220 180 150 / 10%);
+  }
 
   @supports (-webkit-touch-callout: none) and (not (translate: none)) {
     &:not(:last-child) {
@@ -16,7 +24,6 @@ const StyledSkillTag = styled.li`
   }
   
   .iconWrapper {
-    background-color: #fff;
     border-radius: 5px;
     height: 35px;
     width: 35px;
@@ -51,9 +58,9 @@ const StyledSkillTag = styled.li`
   }
 
   .skillTagLabel {
-    color: var(--color1);
+    color: #fdceb5;
     font-size: 1rem;
-    margin-left: 7px;
+    margin-left: ${({ lessGap }) => lessGap ? 5 : 10}px;
   }
 `
 

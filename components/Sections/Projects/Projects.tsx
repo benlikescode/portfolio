@@ -4,11 +4,10 @@ import Project from '../../../types/Project'
 import { ProjectCard } from '../../ProjectCard'
 
 const Projects: FC = () => {
-
   const project1: Project = {
     name: 'GeoHub',
     imageUrl: '/images/GeoHub.png',
-    description: 'A collection of fun geography games. After being placed somewhere random in the world, can you guess where you are?',
+    description: 'GeoHub is a collection of fun geography games. After being placed somewhere random in the world, can you guess where you are?',
     tags: ['NextJS', 'TypeScript', 'MongoDB', 'Maps API'],
     githubLink: 'https://github.com/benlikescode/geohub',
     liveLink: 'https://geohub-prod.vercel.app/'
@@ -25,7 +24,8 @@ const Projects: FC = () => {
   return (
     <StyledProjects id="projects">
       <section className="projectsSection">
-        <h2>Projects</h2>
+        <h2>Featured Projects</h2>
+        
         <div className="projectCards">
           <ProjectCard project={project1} />
           <ProjectCard project={project2} />

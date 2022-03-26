@@ -10,11 +10,10 @@ const StyledNavbar = styled.div`
   color: #ddd;
   z-index: 999;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.05);
   //backdrop-filter: saturate(180%) blur(10px);
   
   header {
-    max-width: 1000px;
+    max-width: 1160px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -54,6 +53,7 @@ const StyledNavbar = styled.div`
   .navLink {
     padding: 0.5rem;
     border-radius: 1rem;
+    font-family: var(--headerFont);
   }
 
   .avatarWrapper {

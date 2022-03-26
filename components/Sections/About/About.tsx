@@ -3,7 +3,6 @@ import { StyledAbout } from '.'
 import { SkillTag } from '../../SkillTag'
 import { 
   FigmaIcon, 
-  GithubIcon, 
   JiraIcon, 
   MongoIcon, 
   MySQLIcon, 
@@ -15,6 +14,8 @@ import {
   SlackIcon, 
   TSIcon 
 } from '../../Icon'
+
+import { GithubIcon } from '../../Icon/Socials'
 
 const About: FC = () => {
   return (
@@ -29,9 +30,9 @@ const About: FC = () => {
               <SkillTag label="React" icon={<ReactIcon />}/>
               <SkillTag label="TypeScript" icon={<TSIcon />}/>
               <SkillTag label="Node" icon={<NodeIcon />}/>
-              <SkillTag label="Next" icon={<NextIcon />}/>
+              <SkillTag label="NextJS" icon={<NextIcon />}/>
               <SkillTag label="Redux" icon={<ReduxIcon />}/>
-              <SkillTag label="MongoDB" icon={<MongoIcon />}/>
+              <SkillTag label="MongoDB" icon={<MongoIcon />} lessGap />
             </ul>       
           </div>
 
@@ -41,6 +42,7 @@ const About: FC = () => {
               <SkillTag label="Slack" icon={<SlackIcon />}/>
               <SkillTag label="Github" icon={<GithubIcon />}/>
               <SkillTag label="Figma" icon={<FigmaIcon />}/>       
+              <SkillTag label="Jira" icon={<JiraIcon />}/>       
             </ul>       
           </div>
         </section>

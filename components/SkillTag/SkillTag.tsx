@@ -5,11 +5,12 @@ import { Icon } from '../Icon'
 type Props = {
   label: string;
   icon: ReactNode;
+  lessGap?: boolean;
 }
 
-const SkillTag: FC<Props> = ({ label, icon }) => {
+const SkillTag: FC<Props> = ({ label, icon, lessGap }) => {
   return (
-    <StyledSkillTag>
+    <StyledSkillTag lessGap={lessGap}>
       <div className="iconWrapper">
         <div className="icon">
           {icon}
