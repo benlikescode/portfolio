@@ -1,9 +1,6 @@
-import { ColorSwatchIcon } from '@heroicons/react/solid'
-import { ButtonHTMLAttributes, FC, useContext } from 'react'
+import { FC, useContext } from 'react'
 import { StyledSelect } from '.'
-import { useColorTheme } from '../../utils/hooks'
 import { colorStore } from '../ColorContext'
-import { Icon } from '../Icon'
 
 type Props = {
   options: string[]

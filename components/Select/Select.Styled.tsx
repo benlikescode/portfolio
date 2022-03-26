@@ -17,17 +17,7 @@ const StyledSelect = styled.div`
     cursor: pointer;
     padding-left: 14px;
     padding-right: 36px;
-  }
-
-  option {
-    background-color: var(--background2);
-  }
-
-  .selectPrefix {
-    display: inline-flex;
-    position: absolute;
-    left: 12px;
-    pointer-events: none;
+    padding-bottom: 2px;
   }
 
   .selectSuffix {
