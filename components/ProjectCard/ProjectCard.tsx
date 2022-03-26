@@ -50,9 +50,9 @@ const ProjectCard: FC<Props> = ({ project }) => {
       </div>
 
       <div className="projectPreviewWrapper">
-        <a className="projectPreview" href={project.githubLink} target="_blank" rel="noreferrer" tabIndex={-1}>
+        <div className="projectPreview">
           <Image src={project.imageUrl} alt="GeoHub Project Preview" layout='fill' objectFit='cover' objectPosition="0%" />
-        </a>
+        </div>
       </div> 
     </StyledProjectCard>
   )
