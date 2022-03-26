@@ -15,7 +15,7 @@ const StyledInput = styled.div<StyledProps>`
   }
 
   .input-styled {
-    height: ${({ isTextArea }) => isTextArea ? '130' : '42'}px;
+    height: ${({ isTextArea }) => isTextArea ? '120' : '42'}px;
     display: flex;
     align-items: center;
    

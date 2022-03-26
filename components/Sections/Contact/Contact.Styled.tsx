@@ -72,7 +72,7 @@ const StyledContact = styled.div`
   .contactInfoWrapper {
     display: grid;
     gap: 1.5rem;
-    margin-top: 4rem;
+    margin-top: 3.5rem;
 
     @media (max-width: 600px) {
       margin-top: 2rem;

@@ -2,15 +2,15 @@ import styled from 'styled-components'
 
 const StyledProjectCard = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 5rem;
 
   &:not(:last-child) {
     margin-bottom: 5rem;
   }  
 
-  @media (max-width: 950px) {
-    flex-direction: column;
+  @media (min-width: 950px) {
+    flex-direction: row;
   }
   
   .projectDetails {
@@ -19,6 +19,10 @@ const StyledProjectCard = styled.div`
     gap: 1.5rem;
     flex: 1;
     max-width: 30rem;
+
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+      margin-right: 5rem;
+    }
   }
 
   .projectHeader {
@@ -35,6 +39,10 @@ const StyledProjectCard = styled.div`
 
   .projectDesc {
     font-size: 18px;
+
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+      margin-top: 1.5rem;
+    }
   }
 
   .techTags {
@@ -74,7 +82,7 @@ const StyledProjectCard = styled.div`
     overflow: hidden;
     background: ${({ theme }) => `linear-gradient(180deg, #ffc6a8 0%, ${theme.color.primary} 100%)`};
     border-radius: 1rem;
-    max-width: 50rem; 
+    max-width: 40rem; 
 
     @media (min-width: 950px) {
       flex: 1;
@@ -124,6 +132,10 @@ const StyledProjectCard = styled.div`
   .projectLinks {
     display: flex;
     align-items: center;
+
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+      margin-top: 1.5rem;
+    }
   }
 
   .projectLinkItem {

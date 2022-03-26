@@ -11,7 +11,7 @@ const Contact: FC = () => {
       <section className="contactSection" id="contact">
         <section className="contactLeft">
           <h2>Contact Me</h2>
-          <p className="contactText">Feel free to send me a message or an email, if you want to connect!</p>
+          <p className="contactText">Feel free to send me an email or message!</p>
           <div className="contactInfoWrapper">
             <div className="contactItem">
               <div className="contactIcon">

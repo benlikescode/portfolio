@@ -47,7 +47,6 @@ const ProjectCard: FC<Props> = ({ project }) => {
             </li>
           ))}    
         </ul>
-
       </div>
 
       <div className="projectPreviewWrapper">
