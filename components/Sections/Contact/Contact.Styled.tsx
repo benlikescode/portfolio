@@ -26,6 +26,7 @@ const StyledContact = styled.div`
     display: grid;
     gap: 1.5rem;
     margin-top: 1.5rem;
+    width: 530px;
 
     @media (max-width: 900px) {
       width: 420px;
