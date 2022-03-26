@@ -16,23 +16,22 @@ const StyledContact = styled.div`
     padding: 4rem 0;
     gap: 3rem;
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       flex-direction: column;
       gap: 4rem;
     }
   }
 
   .contactForm {
-    width: 550px;
     display: grid;
     gap: 1.5rem;
     margin-top: 1.5rem;
 
     @media (max-width: 900px) {
-      width: 350px;
+      width: 420px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       width: 100%;
       margin-top: 0;
     }

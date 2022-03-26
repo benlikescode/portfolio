@@ -33,8 +33,8 @@ const StyledSkillTag = styled.li<StyledProps>`
     padding: 5px;
 
     @media (max-width: 600px) {
-      height: 25px;
-      width: 25px;
+      height: 30px;
+      width: 30px;
     }
   }
 
