@@ -49,6 +49,10 @@ const StyledAbout = styled.div`
     max-width: 80%;
     margin-top: 1rem;
 
+    @media (max-width: 880px) {
+      max-width: 100%;
+    }
+
     @media (max-width: 600px) {
       font-size: 18px;
       line-height: 24px;
