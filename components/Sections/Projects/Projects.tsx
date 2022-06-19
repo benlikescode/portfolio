@@ -10,7 +10,7 @@ const Projects: FC = () => {
     description: 'GeoHub is a collection of fun geography games. After being placed somewhere random in the world, can you guess where you are?',
     tags: ['NextJS', 'TypeScript', 'MongoDB', 'Maps API'],
     githubLink: 'https://github.com/benlikescode/geohub',
-    liveLink: 'https://geohub-prod.vercel.app/'
+    liveLink: 'https://geohub.vercel.app'
   }
 
   const project2: Project = {
