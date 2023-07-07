@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const StyledFooter = styled.div`
+  height: 60px;
   background-color: #070707;
   display: flex;
   align-items: center;
@@ -9,42 +10,38 @@ const StyledFooter = styled.div`
   border-top: 1px solid #141414;
 
   footer {
-    max-width: 1160px;
+    max-width: var(--maxWidth);
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.3rem 0;
-  }
 
-  .socials {
-    display: flex;
-    align-items: center;
-    gap: 23px;
-
-    @media (max-width: 600px) {
-      gap: 1rem;
+    .footer-text {
+      font-size: 14px;
+      color: #555;
     }
-  }
 
-  .socialItem {
-    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-      &:not(:last-child) {
-        margin-right: 23px;
-      }
+    .socials {
+      display: flex;
+      align-items: center;
+      gap: 23px;
 
       @media (max-width: 600px) {
-        margin-right: 1rem;
+        gap: 1rem;
       }
-    }
-  }
 
-  .footerText {
-    font-size: 1rem;
-    color: #888;
+      .social-item {
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          &:not(:last-child) {
+            margin-right: 23px;
+          }
 
-    @media (max-width: 600px) {
-      font-size: 0.8rem;
+          @media (max-width: 600px) {
+            margin-right: 1rem;
+          }
+        }
+      }
     }
   }
 `

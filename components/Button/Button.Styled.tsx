@@ -10,7 +10,7 @@ type StyledProps = {
 }
 
 const StyledButton = styled.button<StyledProps>`
-  width: ${({ width }) => width ? width : 'fit-content'};
+  width: ${({ width }) => (width ? width : 'fit-content')};
   cursor: ${({ isDisabled }) => isDisabled && 'not-allowed'};
 
   display: flex;
@@ -18,7 +18,7 @@ const StyledButton = styled.button<StyledProps>`
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border-radius: ${({ isRound }) => isRound ? '20' : '5'}px;
+  border-radius: ${({ isRound }) => (isRound ? '20' : '5')}px;
   height: 42px;
   padding: 0 25px;
   font-size: 1rem;
@@ -26,9 +26,10 @@ const StyledButton = styled.button<StyledProps>`
   width: 100%;
   user-select: none;
 
-  ${({ buttonType, isDisabled, theme }) => 
-    buttonType === 'solid' && 
-    !isDisabled && `
+  ${({ buttonType, isDisabled, theme }) =>
+    buttonType === 'solid' &&
+    !isDisabled &&
+    `
       background-color: ${theme.color.primary};
       color: #fff;
       border: 1px solid rgba(255, 255, 255, 0.05);
@@ -37,10 +38,11 @@ const StyledButton = styled.button<StyledProps>`
         background-color: ${theme.color.hover};
       }
   `}
-  
-  ${({ buttonType, isDisabled }) => 
-    buttonType === 'ghost' && 
-    !isDisabled && `
+
+  ${({ buttonType, isDisabled }) =>
+    buttonType === 'ghost' &&
+    !isDisabled &&
+    `
       background-color: transparent;
       color: #fff;
       box-shadow: 0 0 0 1px #2F3133;
@@ -49,25 +51,28 @@ const StyledButton = styled.button<StyledProps>`
       }
   `}
   
-  ${({ buttonType, isDisabled }) => 
-    buttonType === 'icon' && 
-    !isDisabled && `
+  ${({ buttonType, isDisabled }) =>
+    buttonType === 'icon' &&
+    !isDisabled &&
+    `
       padding: 0;
       background-color: transparent;
       height: fit-content;
       width: fit-content;
   `}
   
-  ${({ primaryColor, secondaryColor, isDisabled }) => 
-    primaryColor && 
-    secondaryColor && 
-    !isDisabled && `
-      background-color: ${ primaryColor };
-      color: ${ secondaryColor };
+  ${({ primaryColor, secondaryColor, isDisabled }) =>
+    primaryColor &&
+    secondaryColor &&
+    !isDisabled &&
+    `
+      background-color: ${primaryColor};
+      color: ${secondaryColor};
   `}
 
-  ${({ isDisabled }) => 
-    isDisabled && `
+  ${({ isDisabled }) =>
+    isDisabled &&
+    `
       background-color: var(--background3);
       color: var(--color2);
       pointer-events: none;

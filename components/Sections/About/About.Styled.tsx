@@ -5,65 +5,53 @@ const StyledAbout = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 1.25rem;
-  background: rgb(11 11 11);
-  border-bottom: 1px solid #202020;
-  border-top: 1px solid #202020;
-  
+  background-color: #0a0a0a;
+  border-top: 1px solid #181818;
+  border-bottom: 1px solid #181818;
+
   .about {
-    max-width: 1160px;
+    max-width: var(--maxWidth);
     width: 100%;
     padding: 3rem 0;
-  }
 
-  .skillRow {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-
-    @media (max-width: 600px) {
-      font-size: 1.4rem;
-    }
-  }
-
-  h2 {
-    font-size: 3rem;
-    font-family: var(--headerFont);
-    font-weight: 600;
-    
-    @media (max-width: 600px) {
-      font-size: 2.25rem;
-    }
-  }
-
-  h3 { 
-    font-size: 20px;
-    font-weight: 500;
-    color: #fff;
-  }
-
-  .aboutText {
-    color: #aaa;
-    font-size: 22px;
-    line-height: 32px;
-    max-width: 80%;
-    margin-top: 1rem;
-
-    @media (max-width: 880px) {
-      max-width: 100%;
+    h2 {
+      font-size: 24px;
+      font-family: var(--headerFont);
+      font-weight: 600;
     }
 
-    @media (max-width: 600px) {
-      font-size: 18px;
+    .about-text {
+      color: rgb(139 139 139);
+      font-size: 16px;
       line-height: 24px;
-      max-width: 100%;
-    }
-  }
+      max-width: 540px;
+      margin-top: 1rem;
 
-  .skillsWrapper {
-    margin-top: 3rem;
-    display: grid;
-    gap: 2rem;
+      mark {
+        background-color: transparent;
+        color: white;
+        text-shadow: 0 0 6px ${({ theme }) => theme.color.primary};
+      }
+    }
+
+    .skills-wrapper {
+      margin-top: 40px;
+
+      h3 {
+        font-size: 12px;
+        font-weight: 600;
+        color: #707070;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+    }
   }
 `
 

@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { FooterGradient, HeroGradient, MiddleGradient } from '../components/Gradients'
 import { About, Contact, Footer, Hero, Navbar, Projects } from '../components/Sections'
 
 const Home: NextPage = () => {
@@ -14,14 +13,13 @@ const Home: NextPage = () => {
 
       <Navbar />
 
-      <main>
-        <Hero />
-        <About />
-        <Projects />   
-        <Contact />
-      </main>
-
+      {/* <main> */}
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
       <Footer />
+      {/* </main> */}
     </>
   )
 }

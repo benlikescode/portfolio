@@ -1,46 +1,26 @@
 import { useEffect, useState } from 'react'
-import { blueTheme, redTheme, purpleTheme, greenTheme, tealTheme } from '../theme'
+import { blueTheme, greenTheme, purpleTheme, redTheme, tealTheme } from '../theme/color'
+
+export const THEMES = [blueTheme, redTheme, purpleTheme, greenTheme, tealTheme]
 
 const useColorTheme = () => {
-    const [colorTheme, setColorTheme] = useState(blueTheme)
-    const [colorName, setColorName] = useState('Blue')
+  const [colorTheme, setColorTheme] = useState(blueTheme)
+  const [colorIdx, setColorIdx] = useState(0)
 
-    const updateTheme = (mode: string) => {
-      switch (mode) {
-        case 'Blue':
-          setColorTheme({...blueTheme})
-          break
-        case 'Red':
-          setColorTheme({...redTheme})
-          break
-        case 'Purple':
-          setColorTheme({...purpleTheme})
-          break
-        case 'Green':
-          setColorTheme({...greenTheme})
-          break
-        case 'Teal':
-          setColorTheme({...tealTheme})
-          break
-        default:
-          setColorTheme({...blueTheme})
-      }
-    }
+  const setMode = (colorIdx: number) => {
+    console.log(colorIdx)
+    window.localStorage.setItem('theme', colorIdx.toString())
+    setColorTheme(THEMES[colorIdx])
+    setColorIdx(colorIdx)
+  }
 
-    const setMode = (mode: string) => {
-      console.log(mode)
-      window.localStorage.setItem('theme', mode)
-      updateTheme(mode)
-      setColorName(mode)
-    }
+  useEffect(() => {
+    const localTheme = Number(window.localStorage.getItem('theme'))
+    localTheme && setColorTheme(THEMES[localTheme])
+    localTheme && setColorIdx(localTheme)
+  }, [])
 
-    useEffect(() => {
-      const localTheme = window.localStorage.getItem('theme')
-      localTheme && updateTheme(localTheme)
-      localTheme && setColorName(localTheme)
-    }, [])
-
-    return { colorTheme, setMode, colorName }
+  return { colorTheme, setMode, colorIdx }
 }
 
 export default useColorTheme

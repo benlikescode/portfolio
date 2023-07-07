@@ -1,31 +1,31 @@
 import { createContext, ReactNode } from 'react'
 import { useColorTheme } from '../utils/hooks'
-import { blueTheme } from '../utils/theme'
+import { blueTheme } from '../utils/theme/color'
 
 type state = {
-  colorName: string;
-  colorTheme: Object;
-  setMode: (mode: string) => void;
+  colorIdx: number
+  colorTheme: Object
+  setMode: (mode: number) => void
 }
 
 const state: state = {
-  colorName: '',
+  colorIdx: 0,
   colorTheme: blueTheme,
-  setMode: () => null
+  setMode: () => null,
 }
 
 const colorStore = createContext(state)
 const { Provider } = colorStore
 
 const ColorProvider = ({ children }: { children: ReactNode }) => {
-  const { colorName, colorTheme, setMode } = useColorTheme()
+  const { colorIdx, colorTheme, setMode } = useColorTheme()
 
   return (
     <Provider
       value={{
-        colorName,
+        colorIdx,
         colorTheme,
-        setMode
+        setMode,
       }}
     >
       {children}

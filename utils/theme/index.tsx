@@ -1,3 +1,11 @@
-export { breakpoint } from './breakpoint'
-export { redTheme, blueTheme, purpleTheme, greenTheme, tealTheme } from './color'
-export { elevation } from './elevation'
+import { breakpoint } from './breakpoint'
+import { blueTheme } from './color'
+import { elevation } from './elevation'
+
+const theme = {
+  color: blueTheme,
+  elevation,
+  breakpoint,
+}
+
+export type Theme = typeof theme

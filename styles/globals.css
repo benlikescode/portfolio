@@ -50,31 +50,44 @@
   src: local('Inter'), url(../fonts/Inter/Inter-Medium.ttf) format('truetype');
 }
 
+/* Climate Crisis */
+
+@font-face {
+  font-family: 'Climate Crisis';
+  font-weight: 500;
+  src: local('ClimateCrisis'), url(../fonts/ClimateCrisis/ClimateCrisis-Regular.ttf) format('truetype');
+}
+
 :root {
-  --bodyFont: Inter, -apple-system, system-ui, sans-serif;  
+  --bodyFont: Inter, -apple-system, system-ui, sans-serif;
   --headerFont: Graphik, -apple-system, system-ui, sans-serif;
 
   --color1: #fff;
-  --color2: #94A3B8;
-  --color3: #64748B;
-  --background1: #0F172A;
-  --background2: #0C1222;
-  --background3: #1E293B;
+  --color2: #94a3b8;
+  --color3: #64748b;
+  --background1: #0f172a;
+  --background2: #0c1222;
+  --background3: #1e293b;
   --borderColor: #222222;
+
+  --maxWidth: 900px;
 }
 
-html,
 body {
-  padding: 0;
   margin: 0;
-  background-color: #000;
+  background-color: #0a0a0a;
   color: var(--color1);
   font-family: var(--bodyFont);
   font-weight: 400;
-  scroll-behavior: smooth;
-  position: relative;
-  overflow-x: hidden;
-  line-height: 1.5;
+  background-size: 30px 30px;
+  background-image: linear-gradient(to right, #0e0e0e 1px, transparent 1px),
+    linear-gradient(to bottom, #0e0e0e 1px, transparent 1px);
+  /* overflow: hidden; */
+  width: 100vw;
+}
+
+html {
+  background-color: #0a0a0a;
 }
 
 a {
@@ -84,13 +97,23 @@ a {
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth !important;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
-input, button, select, textarea {
+input,
+button,
+select,
+textarea {
   margin: 0;
   padding: 0;
   font-size: 1rem;
@@ -118,3 +141,22 @@ ul {
 ::-webkit-scrollbar-thumb {
   background: #242424;
 }
+
+/* main {
+  height: calc(100vh - 60px);
+  overflow: hidden auto;
+}
+
+@media (max-width: 600px) {
+  main {
+    height: auto;
+    overflow: unset;
+    max-height: 100%;
+    position: relative;
+  }
+
+  body {
+    height: auto;
+    overflow: auto;
+  }
+} */
