@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import { StyledInput } from './'
 
 type Props = {
@@ -8,8 +8,6 @@ type Props = {
   placeholder?: string
   value?: string
   callback?: any
-  errorMessage?: string
-  handleErrors?: () => void
   readOnly?: boolean
   autoComplete?: string
   maxLength?: number
@@ -24,35 +22,15 @@ const Input: FC<Props> = ({
   placeholder,
   value,
   callback,
-  errorMessage,
-  handleErrors,
   readOnly,
   autoComplete,
   maxLength,
   isTextArea,
   isRequired,
 }) => {
-  const [currValue, setCurrValue] = useState<string | number>(value || '')
-  const [showErrorMsg, setShowErrorMsg] = useState(false)
-
-  const clearInput = () => {
-    setCurrValue('')
-  }
-
-  const handleBlur = () => {
-    setShowErrorMsg(true)
-
-    if (handleErrors) {
-      handleErrors()
-    }
-  }
-
-  const onInputChange = (input: string | number) => {
-    setCurrValue(input)
-    setShowErrorMsg(false)
-
+  const onInputChange = (value: string) => {
     if (callback) {
-      callback(input)
+      callback(value)
     }
   }
 
@@ -63,47 +41,33 @@ const Input: FC<Props> = ({
       <div className="input-wrapper">
         {isTextArea ? (
           <textarea
-            placeholder={placeholder}
+            id={name}
             name={name}
+            placeholder={placeholder}
             onChange={(e) => onInputChange(e.currentTarget.value)}
-            value={currValue}
+            value={value}
             lang="en"
             readOnly={readOnly}
-            onBlur={() => handleBlur()}
             autoComplete={autoComplete}
             maxLength={maxLength || 2000}
-            id={name}
             required={isRequired}
           />
         ) : (
           <input
-            placeholder={placeholder}
+            id={name}
             name={name}
+            placeholder={placeholder}
             onChange={(e) => onInputChange(e.currentTarget.value)}
-            value={currValue}
+            value={value}
             type={type}
             lang="en"
             readOnly={readOnly}
-            onBlur={() => handleBlur()}
             autoComplete={autoComplete}
             maxLength={maxLength || 2000}
-            id={name}
             required={isRequired}
           />
         )}
       </div>
-
-      {errorMessage && showErrorMsg && (
-        <div className="input-error">
-          <svg aria-hidden="true" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M10.115 1.308l5.635 11.269A2.365 2.365 0 0 1 13.634 16H2.365A2.365 2.365 0 0 1 .25 12.577L5.884 1.308a2.365 2.365 0 0 1 4.231 0zM8 10.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM8 9c.552 0 1-.32 1-.714V4.714C9 4.32 8.552 4 8 4s-1 .32-1 .714v3.572C7 8.68 7.448 9 8 9z"
-              fillRule="evenodd"
-            ></path>
-          </svg>
-          <span className="input-error-text">{errorMessage}</span>
-        </div>
-      )}
     </StyledInput>
   )
 }

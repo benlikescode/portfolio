@@ -11,7 +11,8 @@ const Contact: FC = () => {
 
   const handleFormSubmit = (e: FormEvent) => {
     e.preventDefault()
-    toast.success('I got your message!')
+    toast.success('I got your message 😀')
+
     setName('')
     setEmail('')
     setMessage('')
@@ -26,8 +27,16 @@ const Contact: FC = () => {
           <input type="hidden" name="form-name" value="contact" />
 
           <div className="top-inputs-wrapper">
-            <Input type="text" name="name" label="Name" callback={setName} value={name} maxLength={60} isRequired />
-            <Input type="text" name="email" label="Email" callback={setEmail} value={email} maxLength={60} isRequired />
+            <Input type="text" name="name" label="Name" callback={setName} value={name} maxLength={100} isRequired />
+            <Input
+              type="text"
+              name="email"
+              label="Email"
+              callback={setEmail}
+              value={email}
+              maxLength={100}
+              isRequired
+            />
           </div>
 
           <Input
@@ -37,8 +46,8 @@ const Contact: FC = () => {
             callback={setMessage}
             value={message}
             maxLength={2000}
-            isTextArea
             isRequired
+            isTextArea
           />
 
           <Button buttonType="solid" width="100%">
