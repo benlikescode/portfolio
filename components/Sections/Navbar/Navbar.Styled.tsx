@@ -11,6 +11,7 @@ const StyledNavbar = styled.div`
   position: sticky;
   top: 0;
   background-color: #0a0a0a;
+  border-bottom: 1px solid #181818;
   /* backdrop-filter: blur(15px) saturate(2); */
   /* box-shadow: 0 0 0 1px #ffffff1a; */
 

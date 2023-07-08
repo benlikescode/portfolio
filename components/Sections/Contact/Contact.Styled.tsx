@@ -29,7 +29,7 @@ const StyledContact = styled.div`
       display: grid;
       gap: 1.5rem;
       margin-top: 2rem;
-      max-width: 550px;
+      max-width: 500px;
       width: 100%;
 
       .top-inputs-wrapper {

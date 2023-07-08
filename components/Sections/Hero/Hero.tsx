@@ -1,15 +1,11 @@
 import { useRouter } from 'next/router'
 import { FC } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Button } from '../../Button'
 import { HeroGradient } from '../../HeroGradient'
 import { StyledHero } from './'
 
 const Hero: FC = () => {
-  const handleScroll = () => {
-    window.scrollBy(0, window.innerHeight)
-  }
-
   const router = useRouter()
 
   return (

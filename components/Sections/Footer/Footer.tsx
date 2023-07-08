@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { Icon } from '../../Icon'
 import { GithubIcon, LinkedInIcon } from '../../Icon/Socials'
 import { StyledFooter } from './'
 
@@ -11,15 +10,11 @@ const Footer: FC = () => {
 
         <div className="socials">
           <a className="social-item" href="https://github.com/benlikescode" target="_blank" rel="noreferrer">
-            <Icon size={20} fill="#888">
-              <GithubIcon />
-            </Icon>
+            <GithubIcon />
           </a>
 
           <a className="social-item" href="https://www.linkedin.com/in/benhoeg/" target="_blank" rel="noreferrer">
-            <Icon size={20} fill="#888">
-              <LinkedInIcon />
-            </Icon>
+            <LinkedInIcon />
           </a>
         </div>
       </footer>

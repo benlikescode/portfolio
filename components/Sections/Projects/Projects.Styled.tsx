@@ -10,6 +10,7 @@ const StyledProjects = styled.div`
     max-width: var(--maxWidth);
     width: 100%;
     padding: 4rem 0 10rem 0;
+    scroll-margin-top: 60px;
 
     h2 {
       font-size: 15px;

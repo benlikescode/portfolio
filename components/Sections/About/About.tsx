@@ -6,7 +6,7 @@ import { StyledAbout } from './'
 const About: FC = () => {
   return (
     <StyledAbout>
-      <section className="about" id="about">
+      <section className="about-section" id="about">
         <h2>About Me</h2>
         <p className="about-text">
           I am a passionate <mark>software developer</mark> who enjoys building amazing frontend designs and optimizing

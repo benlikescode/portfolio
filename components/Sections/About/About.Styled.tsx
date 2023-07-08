@@ -9,10 +9,11 @@ const StyledAbout = styled.div`
   border-top: 1px solid #181818;
   border-bottom: 1px solid #181818;
 
-  .about {
+  .about-section {
     max-width: var(--maxWidth);
     width: 100%;
     padding: 3rem 0;
+    scroll-margin-top: 60px;
 
     h2 {
       font-size: 24px;
@@ -21,7 +22,7 @@ const StyledAbout = styled.div`
     }
 
     .about-text {
-      color: rgb(139 139 139);
+      color: #8b8b8b;
       font-size: 16px;
       line-height: 24px;
       max-width: 540px;

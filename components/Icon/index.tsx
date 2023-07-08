@@ -1,6 +1,3 @@
-export { default as Icon } from './Icon'
-export { default as StyledIcon } from './Icon.Styled'
-
 export { default as ReactIcon } from './React'
 export { default as TSIcon } from './TypeScript'
 export { default as NextIcon } from './Next'

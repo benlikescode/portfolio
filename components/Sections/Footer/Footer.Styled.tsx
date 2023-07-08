@@ -2,12 +2,12 @@ import styled from 'styled-components'
 
 const StyledFooter = styled.div`
   height: 60px;
-  background-color: #070707;
+  background-color: #0a0a0a;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 1.25rem;
-  border-top: 1px solid #141414;
+  border-top: 1px solid #181818;
 
   footer {
     max-width: var(--maxWidth);
@@ -25,20 +25,24 @@ const StyledFooter = styled.div`
     .socials {
       display: flex;
       align-items: center;
-      gap: 23px;
+      gap: 16px;
 
       @media (max-width: 600px) {
         gap: 1rem;
       }
 
       .social-item {
-        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-          &:not(:last-child) {
-            margin-right: 23px;
-          }
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-          @media (max-width: 600px) {
-            margin-right: 1rem;
+        svg {
+          height: 20px;
+          width: 20px;
+          fill: #555;
+
+          &:hover {
+            fill: #777;
           }
         }
       }

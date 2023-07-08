@@ -1,10 +1,11 @@
 type Project = {
-  name: string;
-  imageUrl: string;
-  description: string;
-  tags: string[];
-  liveLink?: string;
-  githubLink?: string;
+  name: string
+  imageUrl: string
+  description: string
+  tags: string[]
+  liveLink?: string
+  githubLink?: string
+  redditLink?: string
 }
 
 export default Project

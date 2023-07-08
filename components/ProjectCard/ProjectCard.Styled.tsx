@@ -1,10 +1,6 @@
 import styled from 'styled-components'
 
 const StyledProjectCard = styled.div`
-  /* display: flex;
-  flex-direction: column;
-  gap: 5rem; */
-
   display: grid;
   gap: 4rem;
   grid-template-columns: 400px auto;
@@ -13,8 +9,9 @@ const StyledProjectCard = styled.div`
     margin-bottom: 5rem;
   }
 
-  @media (max-width: 950px) {
+  @media (max-width: 900px) {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .project-details {
@@ -22,6 +19,11 @@ const StyledProjectCard = styled.div`
     flex-direction: column;
     flex: 1;
     max-width: 30rem;
+    margin-top: 30px;
+
+    @media (max-width: 900px) {
+      margin-top: 0;
+    }
 
     @supports (-webkit-touch-callout: none) and (not (translate: none)) {
       margin-bottom: 5rem;
@@ -34,17 +36,12 @@ const StyledProjectCard = styled.div`
     .project-header {
       color: #fff;
       font-weight: 900;
-      font-size: 28px;
-
-      /* @media (max-width: 600px) {
-      font-size: 1.875rem;
-    } */
+      font-size: 24px;
     }
 
     .project-desc {
-      font-size: 18px;
       color: #979797;
-      margin-top: 4px;
+      margin-top: 6px;
 
       @supports (-webkit-touch-callout: none) and (not (translate: none)) {
         margin-top: 1.5rem;
@@ -56,16 +53,21 @@ const StyledProjectCard = styled.div`
       align-items: center;
       margin-top: 14px;
 
-      @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-        margin-top: 1.5rem;
-      }
-
       .project-link-item {
         display: flex;
         align-items: center;
 
+        svg {
+          height: 20px;
+          fill: #dcdcdc;
+
+          &:hover {
+            fill: ${({ theme }) => theme.color.secondary};
+          }
+        }
+
         &:not(:last-child) {
-          margin-right: 1rem;
+          margin-right: 12px;
         }
 
         &:hover {
@@ -76,6 +78,7 @@ const StyledProjectCard = styled.div`
           margin-left: 0.5rem;
           text-decoration: underline;
           text-underline-offset: 2px;
+          font-size: 14px;
         }
       }
     }
@@ -86,11 +89,12 @@ const StyledProjectCard = styled.div`
       gap: 10px;
       flex-wrap: wrap;
       margin-top: 26px;
+      user-select: none;
 
       .tech-tag {
         background: rgba(255, 255, 255, 0.05);
         border-radius: 0.5rem;
-        padding: 0.5rem 0.85rem;
+        padding: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -100,32 +104,28 @@ const StyledProjectCard = styled.div`
         @media (max-width: 600px) {
           font-size: 0.8rem;
         }
-
-        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-          &:not(:last-child) {
-            margin-right: 10px;
-          }
-        }
       }
     }
   }
 
   .project-preview-wrapper {
     position: relative;
-    width: 100%;
     overflow: hidden;
-    /* background: linear-gradient(0deg, #7928ca91, #7928ca1a); */
     background: ${({ theme }) => `linear-gradient(0deg, ${theme.color.primary}91, ${theme.color.primary}1a)`};
     border-radius: 1rem;
-    max-width: 40rem;
-    padding-top: 100%;
     grid-area: 1;
+    height: 400px;
+    max-width: 480px;
+    width: 100%;
+
+    @media (max-width: 900px) {
+      height: 250px;
+    }
 
     ::after {
       content: '';
       position: absolute;
       inset: 0;
-      /* box-shadow: inset 0 0 0 1px #6a23b163; */
       box-shadow: inset 0 0 0 1px ${({ theme }) => theme.color.gradient};
       border-radius: 1rem;
     }
@@ -136,6 +136,12 @@ const StyledProjectCard = styled.div`
       left: 30px;
       height: 484.5px;
       width: 960px;
+      user-select: none;
+
+      @media (max-width: 900px) {
+        height: calc(484.5px / 2);
+        width: calc(960px / 2);
+      }
 
       img {
         border-radius: 0.5rem;
@@ -154,18 +160,9 @@ const StyledProjectCard = styled.div`
         border-radius: 0.5rem;
       }
 
-      /* @media (max-width: 600px) {
-      width: 533px;
-      height: 269px;
-      /*
-      :hover {
-        transform: none;
-      }
-      */
-
       @media (max-width: 500px) {
-        top: 1.5rem;
-        left: 1.5rem;
+        top: 20px;
+        left: 20px;
       }
     }
   }

@@ -1,4 +1,4 @@
-/* Fonts */
+/* Graphik */
 
 @font-face {
   font-family: 'Graphik';
@@ -84,6 +84,7 @@ body {
     linear-gradient(to bottom, #0e0e0e 1px, transparent 1px);
   /* overflow: hidden; */
   width: 100vw;
+  overflow-x: hidden;
 }
 
 html {
