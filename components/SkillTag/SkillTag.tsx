@@ -1,14 +1,15 @@
-import { FC, ReactNode } from 'react'
+import { FC } from 'react'
+import SKILLS from '../../utils/constants/skills'
 import { StyledSkillTag } from './'
 
 type Props = {
-  icon: ReactNode
+  skill: (typeof SKILLS)[number]
 }
 
-const SkillTag: FC<Props> = ({ icon }) => {
+const SkillTag: FC<Props> = ({ skill }) => {
   return (
-    <StyledSkillTag>
-      <div className="icon">{icon}</div>
+    <StyledSkillTag data-tooltip={skill.name}>
+      <div className="icon">{skill.icon}</div>
     </StyledSkillTag>
   )
 }

@@ -58,6 +58,19 @@
   src: local('ClimateCrisis'), url(../fonts/ClimateCrisis/ClimateCrisis-Regular.ttf) format('truetype');
 }
 
+/* Animations */
+
+@keyframes popin {
+  from {
+    transform: translateX(-50%) translateY(4px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
 :root {
   --bodyFont: Inter, -apple-system, system-ui, sans-serif;
   --headerFont: Graphik, -apple-system, system-ui, sans-serif;
@@ -70,7 +83,7 @@
   --background3: #1e293b;
   --borderColor: #222222;
 
-  --maxWidth: 900px;
+  --maxWidth: 750px;
 }
 
 body {
@@ -82,7 +95,6 @@ body {
   background-size: 30px 30px;
   background-image: linear-gradient(to right, #0e0e0e 1px, transparent 1px),
     linear-gradient(to bottom, #0e0e0e 1px, transparent 1px);
-  /* overflow: hidden; */
   width: 100vw;
   overflow-x: hidden;
 }
@@ -143,21 +155,30 @@ ul {
   background: #242424;
 }
 
-/* main {
-  height: calc(100vh - 60px);
-  overflow: hidden auto;
+[data-tooltip] {
+  position: relative;
 }
 
-@media (max-width: 600px) {
-  main {
-    height: auto;
-    overflow: unset;
-    max-height: 100%;
-    position: relative;
-  }
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  background: white;
+  height: 27px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  text-align: center;
+  padding: 0 12px;
+  display: none;
+  align-items: center;
+  border-radius: 50rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  pointer-events: none;
+  animation: popin 0.2s forwards;
+}
 
-  body {
-    height: auto;
-    overflow: auto;
-  }
-} */
+[data-tooltip]:hover::after {
+  display: flex;
+}

@@ -3,9 +3,14 @@ type Project = {
   imageUrl: string
   description: string
   tags: string[]
-  liveLink?: string
-  githubLink?: string
-  redditLink?: string
+  links: {
+    type: 'reddit' | 'github' | 'web'
+    url: string
+  }[]
+  button: {
+    label: string
+    url: string
+  }
 }
 
 export default Project

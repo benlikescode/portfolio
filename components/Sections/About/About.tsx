@@ -16,7 +16,7 @@ const About: FC = () => {
           <h3>Main Skills</h3>
           <ul>
             {SKILLS.map((skill) => (
-              <SkillTag key={skill.name} icon={skill.icon} />
+              <SkillTag skill={skill} key={skill.name} />
             ))}
           </ul>
         </div>

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { FC } from 'react'
 import Project from '../../types/Project'
+import { ExternalLinkIcon, GlobeIcon } from '../Icon'
 import { GithubIcon, RedditIcon } from '../Icon/Socials'
 import { StyledProjectCard } from './'
 
@@ -9,39 +10,53 @@ type Props = {
 }
 
 const ProjectCard: FC<Props> = ({ project }) => {
+  const getLinkIcon = (type: Project['links'][number]['type']) => {
+    switch (type) {
+      case 'github':
+        return <GithubIcon />
+      case 'reddit':
+        return <RedditIcon />
+      case 'web':
+        return <GlobeIcon />
+    }
+  }
+
+  const getLinkLabel = (link: Project['links'][number]) => {
+    switch (link.type) {
+      case 'github':
+        return 'GitHub'
+      case 'reddit':
+        return 'Reddit'
+      case 'web':
+        return new URL(link.url).hostname
+    }
+  }
+
   return (
     <StyledProjectCard>
       <div className="project-details">
-        <h3 className="project-header">{project.name}</h3>
+        <h3 className="project-header">
+          {project.name}
+          <div className="project-links">
+            {project.links.map((link) => {
+              return (
+                <a
+                  className="project-link-item"
+                  data-tooltip={getLinkLabel(link)}
+                  href={link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={link.url}
+                >
+                  {getLinkIcon(link.type)}
+                </a>
+              )
+            })}
+          </div>
+        </h3>
 
         <div className="project-desc">
           <p>{project.description}</p>
-        </div>
-
-        <div className="project-links">
-          {project.githubLink && (
-            <a className="project-link-item" href={project.githubLink} target="_blank" rel="noreferrer">
-              <GithubIcon />
-              {/* <span className="link-label">Github</span> */}
-            </a>
-          )}
-
-          {project.redditLink && (
-            <a className="project-link-item" href={project.redditLink} target="_blank" rel="noreferrer">
-              <RedditIcon />
-              {/* <span className="link-label">Reddit</span> */}
-            </a>
-          )}
-
-          {project.liveLink && (
-            <a className="project-link-item" href={project.liveLink} target="_blank" rel="noreferrer">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <title>Google Chrome</title>
-                <path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-5.344 9.257c.206.01.413.016.621.016 6.627 0 12-5.373 12-12 0-1.54-.29-3.011-.818-4.364zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728Z" />
-              </svg>
-              {/* <span className="link-label">Live</span> */}
-            </a>
-          )}
         </div>
 
         <ul className="tech-tags">
@@ -51,6 +66,11 @@ const ProjectCard: FC<Props> = ({ project }) => {
             </li>
           ))}
         </ul>
+
+        <a className="post-btn" href={project.button.url} target="_blank" rel="noreferrer" draggable={false}>
+          {project.button.label}
+          <ExternalLinkIcon />
+        </a>
       </div>
 
       <div className="project-preview-wrapper">
