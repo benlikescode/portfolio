@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 const StyledContact = styled.div`
-  background-color: #0a0a0a;
+  background-color: ${({ theme }) => theme.color.background[0]};
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 1.25rem;
-  border-top: 1px solid #181818;
+  border-top: 1px solid ${({ theme }) => theme.color.border};
 
   .contact-section {
-    max-width: var(--maxWidth);
+    max-width: ${({ theme }) => theme.breakpoint.maxWidth};
     width: 100%;
     padding: 4rem 0;
     gap: 3rem;
@@ -21,7 +21,7 @@ const StyledContact = styled.div`
 
     h2 {
       font-size: 24px;
-      font-family: var(--headerFont);
+      font-family: ${({ theme }) => theme.typeface.graphik};
       font-weight: 600;
     }
 

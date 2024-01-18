@@ -10,29 +10,28 @@ const StyledNavbar = styled.div`
   z-index: 20;
   position: sticky;
   top: 0;
-  background-color: #0a0a0a;
-  border-bottom: 1px solid #181818;
-  /* backdrop-filter: blur(15px) saturate(2); */
-  /* box-shadow: 0 0 0 1px #ffffff1a; */
-
-  /* @media (max-width: 767px) {
-    .sticky-header {
-      position: fixed;
-    }
-  } */
+  background-color: ${({ theme }) => theme.color.background[0]};
+  border-bottom: 1px solid ${({ theme }) => theme.color.border};
+  backdrop-filter: blur(15px) saturate(2);
 
   header {
-    max-width: var(--maxWidth);
+    max-width: ${({ theme }) => theme.breakpoint.maxWidth};
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
+    .header-group {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
     .avatar-wrapper {
       height: 36px;
       width: 36px;
       border-radius: 50%;
-      border: 2px solid ${({ theme }) => theme.color.avatar};
+      border: 2px solid ${({ theme }) => theme.color.mode.avatar};
       display: flex;
       align-items: center;
       justify-content: center;
@@ -80,7 +79,7 @@ const StyledNavbar = styled.div`
       .nav-link {
         padding: 0.5rem;
         border-radius: 1rem;
-        font-family: var(--headerFont);
+        font-family: ${({ theme }) => theme.typeface.graphik};
         font-size: 14px;
         color: #777;
 
@@ -88,10 +87,16 @@ const StyledNavbar = styled.div`
           display: none;
         }
       }
+    }
+
+    .theme-buttons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
 
       .theme-switcher {
         background: transparent;
-        border: 1px solid #222;
+        border: 1px solid ${({ theme }) => theme.color.border};
         border-radius: 8px;
         height: 32px;
         width: 32px;
@@ -99,11 +104,16 @@ const StyledNavbar = styled.div`
         align-items: center;
         justify-content: center;
 
+        svg {
+          height: 16px;
+          color: #777;
+        }
+
         .current-theme {
           height: 14px;
           width: 14px;
           border-radius: 50%;
-          background-color: ${({ theme }) => theme.color.primary};
+          background-color: ${({ theme }) => theme.color.mode.primary};
         }
       }
     }

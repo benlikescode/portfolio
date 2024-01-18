@@ -17,12 +17,32 @@ const PROJECTS: Project[] = [
       },
       {
         type: 'web',
-        url: 'https://geohub.vercel.app',
+        url: 'https://www.geohub.gg',
       },
     ],
     button: {
       label: 'View on Web',
-      url: 'https://geohub.vercel.app',
+      url: 'https://www.geohub.gg',
+    },
+  },
+  {
+    name: 'Snippy',
+    imageUrl: '/images/snippygood.jpg',
+    description: 'VS Code extension & Web App to accelerate development through reuse of common code',
+    tags: ['NextJS', 'TypeScript', 'MySQL', 'Prisma'],
+    links: [
+      {
+        type: 'github',
+        url: 'https://github.com/benlikescode/snippy',
+      },
+      {
+        type: 'web',
+        url: 'https://www.snippy.app',
+      },
+    ],
+    button: {
+      label: 'View on Web',
+      url: 'https://www.snippy.app',
     },
   },
   {

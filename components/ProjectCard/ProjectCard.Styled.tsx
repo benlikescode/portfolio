@@ -34,7 +34,7 @@ const StyledProjectCard = styled.div`
     }
 
     .project-header {
-      color: #fff;
+      color: ${({ theme }) => theme.color.text[0]};
       font-weight: 900;
       font-size: 22px;
       display: flex;
@@ -51,10 +51,10 @@ const StyledProjectCard = styled.div`
 
           svg {
             height: 20px;
-            fill: #484848;
+            fill: ${({ theme }) => theme.color.icon};
 
             &:hover {
-              fill: ${({ theme }) => theme.color.secondary};
+              fill: ${({ theme }) => theme.color.mode.secondary};
             }
           }
 
@@ -63,7 +63,7 @@ const StyledProjectCard = styled.div`
           }
 
           &:hover {
-            color: ${({ theme }) => theme.color.avatar};
+            color: ${({ theme }) => theme.color.mode.avatar};
           }
 
           .link-label {
@@ -77,7 +77,7 @@ const StyledProjectCard = styled.div`
     }
 
     .project-desc {
-      color: #979797;
+      color: ${({ theme }) => theme.color.text[1]};
       margin-top: 10px;
 
       @supports (-webkit-touch-callout: none) and (not (translate: none)) {
@@ -115,9 +115,9 @@ const StyledProjectCard = styled.div`
       justify-content: center;
       margin-top: 24px;
       width: fit-content;
-      background-color: ${({ theme }) => theme.color.primary}60;
+      background-color: ${({ theme }) => theme.color.mode.primary}60;
       color: white;
-      border-color: ${({ theme }) => theme.color.primary}60;
+      border-color: ${({ theme }) => theme.color.mode.primary}60;
       transition: 0.2s;
 
       .arrow {
@@ -125,8 +125,8 @@ const StyledProjectCard = styled.div`
       }
 
       &:hover {
-        background-color: ${({ theme }) => theme.color.primary}90;
-        border-color: ${({ theme }) => theme.color.primary}90;
+        background-color: ${({ theme }) => theme.color.mode.primary}90;
+        border-color: ${({ theme }) => theme.color.mode.primary}90;
 
         .arrow {
           transform: translate(2px, -2px);
@@ -143,10 +143,10 @@ const StyledProjectCard = styled.div`
   .project-preview-wrapper {
     position: relative;
     overflow: hidden;
-    background: ${({ theme }) => `linear-gradient(0deg, ${theme.color.primary}91, ${theme.color.primary}1a)`};
+    background: ${({ theme }) => `linear-gradient(0deg, ${theme.color.mode.primary}91, ${theme.color.mode.primary}1a)`};
     border-radius: 1rem;
     grid-area: 1;
-    height: 300px;
+    height: 250px;
     max-width: 480px;
     width: 100%;
 
@@ -158,7 +158,7 @@ const StyledProjectCard = styled.div`
       content: '';
       position: absolute;
       inset: 0;
-      box-shadow: inset 0 0 0 1px ${({ theme }) => theme.color.gradient};
+      box-shadow: inset 0 0 0 1px ${({ theme }) => theme.color.mode.gradient};
       border-radius: 1rem;
     }
 

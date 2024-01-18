@@ -9,7 +9,7 @@ const StyledHeroGradient = styled.div<StyledProps>`
   top: -1900;
   left: -1900;
   pointer-events: none;
-  background: ${({ theme }) => `radial-gradient(circle closest-side, ${theme.color.gradient}, rgba(0, 0, 0, 0))`};
+  background: ${({ theme }) => `radial-gradient(circle closest-side, ${theme.color.mode.gradient}, rgba(0, 0, 0, 0))`};
 `
 
 export default StyledHeroGradient

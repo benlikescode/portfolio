@@ -24,8 +24,8 @@ const StyledInput = styled.div<StyledProps>`
     textarea {
       height: 100%;
       border-radius: 5px;
-      background-color: #131313;
-      border: 1px solid #181818;
+      background-color: ${({ theme }) => theme.color.background[2]};
+      border: 1px solid ${({ theme }) => theme.color.inputBorder};
       font-size: 15px;
       width: 100%;
       box-sizing: border-box;
@@ -42,27 +42,6 @@ const StyledInput = styled.div<StyledProps>`
       padding: 14px;
       resize: none;
       line-height: 20px;
-    }
-  }
-
-  .input-error {
-    color: var(--lightRed);
-    font-size: 14px;
-    margin-top: 10px;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-
-    svg {
-      fill: var(--lightRed);
-      height: 14px;
-      width: 14px;
-    }
-
-    .input-error-text {
-      display: block;
-      margin-top: 3px;
-      margin-left: 10px;
     }
   }
 `

@@ -4,16 +4,16 @@ const StyledSkillTag = styled.li`
   display: flex;
   align-items: center;
   border-radius: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: ${({ theme }) => theme.color.transparent[0]};
   margin-top: 10px;
   padding: 6px;
 
   &:hover {
-    background-color: ${({ theme }) => `${theme.color.secondary}20`};
+    background-color: ${({ theme }) => `${theme.color.mode.secondary}20`};
     transition: all 0.2s ease;
 
     .icon svg {
-      fill: ${({ theme }) => theme.color.secondary};
+      fill: ${({ theme }) => theme.color.mode.secondary};
     }
   }
 
@@ -41,7 +41,7 @@ const StyledSkillTag = styled.li`
     svg {
       height: 100%;
       width: 100%;
-      fill: #fff;
+      fill: ${({ theme }) => theme.color.text[0]};
       transition: all 0.2s ease;
 
       path {

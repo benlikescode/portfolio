@@ -7,17 +7,17 @@ const StyledProjects = styled.div`
   padding: 0 1.25rem;
 
   .projects-section {
-    max-width: var(--maxWidth);
+    max-width: ${({ theme }) => theme.breakpoint.maxWidth};
     width: 100%;
     padding: 4rem 0 10rem 0;
     scroll-margin-top: 60px;
 
     h2 {
       font-size: 15px;
-      font-family: var(--headerFont);
+      font-family: ${({ theme }) => theme.typeface.graphik};
       font-weight: 600;
       letter-spacing: 3px;
-      color: #ffffff42;
+      color: ${({ theme }) => theme.color.text[2]};
       text-transform: uppercase;
     }
 

@@ -1,12 +1,12 @@
-import '../styles/globals.css'
+import '../fonts/index.css'
 import { FC, useContext } from 'react'
 import { Toaster } from 'react-hot-toast'
 import { ThemeProvider } from 'styled-components'
 import { MetaHead } from '../components/MetaHead'
 import { ColorProvider, colorStore } from '../context/ColorContext'
 import { Global } from '../styles/globals'
-import { breakpoint } from '../utils/theme/breakpoint'
-import { elevation } from '../utils/theme/elevation'
+import { theme } from '../utils/theme'
+import { darkMode, lightMode } from '../utils/theme/color'
 
 import type { AppProps } from 'next/app'
 const appContainer = ({ ...rest }: AppProps) => {
@@ -20,18 +20,17 @@ const appContainer = ({ ...rest }: AppProps) => {
 export default appContainer
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
-  const { colorTheme } = useContext(colorStore)
-
-  const theme = {
-    color: colorTheme,
-    breakpoint,
-    elevation,
-  }
+  const { colorTheme, appTheme } = useContext(colorStore)
 
   return (
     <>
       <MetaHead />
-      <ThemeProvider theme={theme}>
+      <ThemeProvider
+        theme={{
+          ...theme,
+          color: appTheme === 'dark' ? { ...darkMode, mode: colorTheme } : { ...lightMode, mode: colorTheme },
+        }}
+      >
         <Global />
         <Component {...pageProps} />
         <Toaster

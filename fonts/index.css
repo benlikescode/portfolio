@@ -1,0 +1,59 @@
+/* Climate Crisis */
+
+@font-face {
+  font-family: 'Climate Crisis';
+  font-weight: 500;
+  src: local('ClimateCrisis'), url(../fonts/ClimateCrisis/ClimateCrisis-Regular.ttf) format('truetype');
+}
+
+/* Graphik */
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 400;
+  src: local('Graphik'), url(../fonts/Graphik/Graphik-400-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 500;
+  src: local('Graphik'), url(../fonts/Graphik/Graphik-500-Medium.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 600;
+  src: local('Graphik'), url(../fonts/Graphik/Graphik-600-Semibold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 700;
+  src: local('Graphik'), url(../fonts/Graphik/Graphik-700-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 800;
+  src: local('Graphik'), url(../fonts/Graphik/Graphik-800-Black.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 900;
+  src: local('Graphik'), url(../fonts/Graphik/Graphik-900-Super.otf) format('opentype');
+}
+
+/* Inter */
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 400;
+  src: local('Inter'), url(../fonts/Inter/Inter-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 500;
+  src: local('Inter'), url(../fonts/Inter/Inter-Medium.ttf) format('truetype');
+}

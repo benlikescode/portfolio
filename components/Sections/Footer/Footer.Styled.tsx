@@ -2,15 +2,15 @@ import styled from 'styled-components'
 
 const StyledFooter = styled.div`
   height: 60px;
-  background-color: #0a0a0a;
+  background-color: ${({ theme }) => theme.color.background[0]};
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 1.25rem;
-  border-top: 1px solid #181818;
+  border-top: 1px solid ${({ theme }) => theme.color.border};
 
   footer {
-    max-width: var(--maxWidth);
+    max-width: ${({ theme }) => theme.breakpoint.maxWidth};
     width: 100%;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@ const StyledFooter = styled.div`
 
     .footer-text {
       font-size: 14px;
-      color: #555;
+      color: #777;
     }
 
     .socials {
@@ -39,7 +39,7 @@ const StyledFooter = styled.div`
         svg {
           height: 20px;
           width: 20px;
-          fill: #555;
+          fill: ${({ theme }) => theme.color.icon};
 
           &:hover {
             fill: #777;

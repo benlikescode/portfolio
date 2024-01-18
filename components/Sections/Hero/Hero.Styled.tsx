@@ -16,14 +16,14 @@ const DownIndicatorAnim = keyframes`
 `
 
 const StyledHero = styled.div`
-  height: calc(70vh - 60px);
+  height: calc(60vh - 60px);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 1.25rem;
   position: relative;
   overflow: hidden;
-  font-family: 'Climate Crisis';
+  font-family: ${({ theme }) => theme.typeface.climate};
 
   .hero-content {
     max-width: 1400px;
@@ -36,16 +36,14 @@ const StyledHero = styled.div`
 
     .cta-title {
       margin-bottom: 2rem;
-      font-family: var(--headerFont);
+      font-family: ${({ theme }) => theme.typeface.graphik};
       font-size: 90px;
       color: #ffffff;
       font-weight: 500;
-      font-family: 'Climate Crisis';
-      /* text-shadow: 0 10px 0px #9c4eeb, 0 20px 0px #7928ca, 0 6px 19px #7928ca6b;
-    -webkit-text-stroke: 1px #7928ca; */
-      text-shadow: 0 10px 0px ${({ theme }) => theme.color.secondary}, 0 20px 0px ${({ theme }) => theme.color.primary},
-        0 6px 19px ${({ theme }) => theme.color.primary}6b;
-      -webkit-text-stroke: 1px ${({ theme }) => theme.color.primary};
+      font-family: ${({ theme }) => theme.typeface.climate};
+      text-shadow: 0 10px 0px ${({ theme }) => theme.color.mode.secondary},
+        0 20px 0px ${({ theme }) => theme.color.mode.primary}, 0 6px 19px ${({ theme }) => theme.color.mode.primary}6b;
+      -webkit-text-stroke: 1px ${({ theme }) => theme.color.mode.primary};
       text-transform: uppercase;
       user-select: none;
 

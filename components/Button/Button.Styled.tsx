@@ -30,12 +30,12 @@ const StyledButton = styled.button<StyledProps>`
     buttonType === 'solid' &&
     !isDisabled &&
     `
-      background-color: ${theme.color.primary};
-      color: #fff;
+      background-color: ${theme.color.mode.primary};
+      color: ${theme.color.text[0]}
       border: 1px solid rgba(255, 255, 255, 0.05);
 
       :hover {
-        background-color: ${theme.color.hover};
+        background-color: ${theme.color.mode.hover};
       }
   `}
 
@@ -49,34 +49,6 @@ const StyledButton = styled.button<StyledProps>`
       :hover {
         box-shadow: 0 0 0 2px #2F3133;
       }
-  `}
-  
-  ${({ buttonType, isDisabled }) =>
-    buttonType === 'icon' &&
-    !isDisabled &&
-    `
-      padding: 0;
-      background-color: transparent;
-      height: fit-content;
-      width: fit-content;
-  `}
-  
-  ${({ primaryColor, secondaryColor, isDisabled }) =>
-    primaryColor &&
-    secondaryColor &&
-    !isDisabled &&
-    `
-      background-color: ${primaryColor};
-      color: ${secondaryColor};
-  `}
-
-  ${({ isDisabled }) =>
-    isDisabled &&
-    `
-      background-color: var(--background3);
-      color: var(--color2);
-      pointer-events: none;
-      opacity: 0.5;
   `}
 `
 
