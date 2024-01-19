@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import { FC } from 'react'
 import Project from '../../types/Project'
@@ -77,7 +76,6 @@ const ProjectCard: FC<Props> = ({ project }) => {
       <div className="project-preview-wrapper">
         <div className="project-preview">
           <Image src={project.imageUrl} alt="" layout="fill" objectFit="cover" />
-          {/* <img src={project.imageUrl} alt="" /> */}
         </div>
       </div>
     </StyledProjectCard>

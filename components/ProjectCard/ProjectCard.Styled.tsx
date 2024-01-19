@@ -150,10 +150,6 @@ const StyledProjectCard = styled.div`
     max-width: 480px;
     width: 100%;
 
-    @media (max-width: 900px) {
-      height: 250px;
-    }
-
     ::after {
       content: '';
       position: absolute;
@@ -166,13 +162,13 @@ const StyledProjectCard = styled.div`
       position: absolute;
       top: 30px;
       left: 30px;
-      height: 484.5px;
-      width: 960px;
+      height: 404px;
+      width: 737px;
       user-select: none;
 
       @media (max-width: 900px) {
-        height: calc(484.5px / 2);
-        width: calc(960px / 2);
+        top: 16px;
+        left: 16px;
       }
 
       img {
@@ -190,11 +186,6 @@ const StyledProjectCard = styled.div`
         box-shadow: inset 0 0 0 1px #ffffff24, 0 5px 8px 0px #00000070;
         z-index: 1;
         border-radius: 0.5rem;
-      }
-
-      @media (max-width: 500px) {
-        top: 20px;
-        left: 20px;
       }
     }
   }
