@@ -6,14 +6,14 @@ import { THEMES } from '../../../utils/hooks/useColorTheme'
 import { StyledNavbar } from './'
 
 const Navbar: FC = () => {
-  const { setMode, colorIdx, setAppMode, appTheme } = useContext(colorStore)
+  const { themeIdx, mode, setTheme, setMode } = useContext(colorStore)
 
   const changeColorTheme = () => {
-    setMode(colorIdx + 1 >= THEMES.length ? 0 : colorIdx + 1)
+    setTheme(themeIdx + 1 >= THEMES.length ? 0 : themeIdx + 1)
   }
 
   const changeTheme = () => {
-    setAppMode(appTheme === 'dark' ? 'light' : 'dark')
+    setMode(mode === 'dark' ? 'light' : 'dark')
   }
 
   return (
@@ -58,7 +58,7 @@ const Navbar: FC = () => {
             <div className="current-theme"></div>
           </button>
           <button className="theme-switcher" onClick={() => changeTheme()}>
-            {appTheme === 'dark' ? <SunIcon /> : <MoonIcon />}
+            {mode === 'dark' ? <SunIcon /> : <MoonIcon />}
           </button>
         </div>
       </header>

@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components'
 import { MetaHead } from '../components/MetaHead'
 import { ColorProvider, colorStore } from '../context/ColorContext'
 import { Global } from '../styles/globals'
-import { theme } from '../utils/theme'
+import { theme as appTheme } from '../utils/theme'
 import { darkMode, lightMode } from '../utils/theme/color'
 
 import type { AppProps } from 'next/app'
@@ -20,15 +20,15 @@ const appContainer = ({ ...rest }: AppProps) => {
 export default appContainer
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
-  const { colorTheme, appTheme } = useContext(colorStore)
+  const { theme, mode } = useContext(colorStore)
 
   return (
     <>
       <MetaHead />
       <ThemeProvider
         theme={{
-          ...theme,
-          color: appTheme === 'dark' ? { ...darkMode, mode: colorTheme } : { ...lightMode, mode: colorTheme },
+          ...appTheme,
+          color: mode === 'dark' ? { ...darkMode, mode: theme } : { ...lightMode, mode: theme },
         }}
       >
         <Global />
@@ -37,8 +37,8 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
           position="bottom-right"
           toastOptions={{
             style: {
-              background: theme.color.bg[600],
-              color: theme.color.text[200],
+              background: appTheme.color.bg[600],
+              color: appTheme.color.text[200],
             },
             position: 'bottom-center',
           }}

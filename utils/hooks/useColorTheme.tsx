@@ -1,38 +1,37 @@
 import { useEffect, useState } from 'react'
-import { blueTheme, darkMode, greenTheme, lightMode, purpleTheme, redTheme, tealTheme } from '../theme/color'
+import { blueTheme, greenTheme, purpleTheme, redTheme, tealTheme } from '../theme/color'
 
 export const THEMES = [blueTheme, redTheme, purpleTheme, greenTheme, tealTheme]
 
-type AppTheme = 'light' | 'dark'
+export type ModeType = 'light' | 'dark'
 
 const useColorTheme = () => {
-  const [colorTheme, setColorTheme] = useState(blueTheme)
-  const [colorIdx, setColorIdx] = useState(0)
-  const [appTheme, setAppTheme] = useState<AppTheme>('dark')
+  const [theme, setTheme] = useState(blueTheme)
+  const [themeIdx, setThemeIdx] = useState(0)
+  const [mode, setMode] = useState<ModeType>('dark')
 
-  const setMode = (colorIdx: number) => {
-    console.log(colorIdx)
-    window.localStorage.setItem('theme', colorIdx.toString())
-    setColorTheme(THEMES[colorIdx])
-    setColorIdx(colorIdx)
+  const handleSetTheme = (themeIdx: number) => {
+    setTheme(THEMES[themeIdx])
+    setThemeIdx(themeIdx)
+    window.localStorage.setItem('theme', themeIdx.toString())
   }
 
-  const setAppMode = (mode: 'light' | 'dark') => {
-    window.localStorage.setItem('app-theme', mode)
-    setAppTheme(mode)
+  const handleSetMode = (mode: ModeType) => {
+    setMode(mode)
+    window.localStorage.setItem('mode', mode)
   }
 
   useEffect(() => {
-    const localTheme = Number(window.localStorage.getItem('theme'))
-    const localAppTheme = window.localStorage.getItem('app-theme') as AppTheme
+    const savedThemeIdx = Number(window.localStorage.getItem('theme'))
+    const savedMode = window.localStorage.getItem('mode') as ModeType
 
-    localTheme && setColorTheme(THEMES[localTheme])
-    localTheme && setColorIdx(localTheme)
+    savedThemeIdx && setTheme(THEMES[savedThemeIdx])
+    savedThemeIdx && setThemeIdx(savedThemeIdx)
 
-    localAppTheme && setAppTheme(localAppTheme)
+    savedMode && setMode(savedMode)
   }, [])
 
-  return { colorTheme, setMode, setAppMode, colorIdx, appTheme }
+  return { theme, themeIdx, mode, handleSetTheme, handleSetMode }
 }
 
 export default useColorTheme
