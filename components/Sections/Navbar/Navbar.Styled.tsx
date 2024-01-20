@@ -10,7 +10,7 @@ const StyledNavbar = styled.div`
   z-index: 20;
   position: sticky;
   top: 0;
-  background-color: ${({ theme }) => theme.color.background[0]};
+  background-color: ${({ theme }) => theme.color.bg[600]};
   border-bottom: 1px solid ${({ theme }) => theme.color.border};
   backdrop-filter: blur(15px) saturate(2);
 
@@ -81,7 +81,7 @@ const StyledNavbar = styled.div`
         border-radius: 1rem;
         font-family: ${({ theme }) => theme.typeface.graphik};
         font-size: 14px;
-        color: #777;
+        color: ${({ theme }) => theme.color.text[500]};
 
         @media (max-width: 600px) {
           display: none;
@@ -106,7 +106,7 @@ const StyledNavbar = styled.div`
 
         svg {
           height: 16px;
-          color: #777;
+          color: ${({ theme }) => theme.color.icon};
         }
 
         .current-theme {

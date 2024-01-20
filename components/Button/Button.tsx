@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, FC, ReactNode } from 'react'
 import { StyledButton } from './'
 
 type Props = {
-  buttonType: 'solid' | 'ghost' | 'icon'
+  buttonType: 'solid' | 'icon'
   primaryColor?: string
   secondaryColor?: string
   isDisabled?: boolean

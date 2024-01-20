@@ -17,7 +17,7 @@ const StyledProjects = styled.div`
       font-family: ${({ theme }) => theme.typeface.graphik};
       font-weight: 600;
       letter-spacing: 3px;
-      color: ${({ theme }) => theme.color.text[2]};
+      color: ${({ theme }) => theme.color.text[600]};
       text-transform: uppercase;
     }
 

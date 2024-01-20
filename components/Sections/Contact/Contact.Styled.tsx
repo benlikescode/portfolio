@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledContact = styled.div`
-  background-color: ${({ theme }) => theme.color.background[0]};
+  background-color: ${({ theme }) => theme.color.bg[600]};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +29,7 @@ const StyledContact = styled.div`
       display: grid;
       gap: 1.5rem;
       margin-top: 2rem;
-      max-width: 500px;
+      max-width: 600px;
       width: 100%;
 
       .top-inputs-wrapper {

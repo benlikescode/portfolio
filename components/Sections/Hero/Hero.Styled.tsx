@@ -38,7 +38,7 @@ const StyledHero = styled.div`
       margin-bottom: 2rem;
       font-family: ${({ theme }) => theme.typeface.graphik};
       font-size: 90px;
-      color: #ffffff;
+      color: ${({ theme }) => theme.color.heroName};
       font-weight: 500;
       font-family: ${({ theme }) => theme.typeface.climate};
       text-shadow: 0 10px 0px ${({ theme }) => theme.color.mode.secondary},
@@ -66,20 +66,19 @@ const StyledHero = styled.div`
   }
 
   .down-indicator {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 40px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #ffffff11;
-    color: white;
-    padding: 0;
-    border: none;
-    box-shadow: none;
     display: grid;
     align-content: center;
+    justify-content: center;
+    gap: 8px;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: ${({ theme }) => theme.color.transparent[100]};
+    color: ${({ theme }) => theme.color.text[50]};
 
     @supports (-webkit-touch-callout: none) {
       bottom: 100px;

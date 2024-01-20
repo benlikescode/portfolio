@@ -5,7 +5,7 @@ const StyledAbout = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 1.25rem;
-  background-color: ${({ theme }) => theme.color.background[0]};
+  background-color: ${({ theme }) => theme.color.bg[600]};
   border-top: 1px solid ${({ theme }) => theme.color.border};
   border-bottom: 1px solid ${({ theme }) => theme.color.border};
 
@@ -22,7 +22,7 @@ const StyledAbout = styled.div`
     }
 
     .about-text {
-      color: #8b8b8b;
+      color: ${({ theme }) => theme.color.text[500]};
       font-size: 16px;
       line-height: 24px;
       max-width: 540px;
@@ -30,7 +30,7 @@ const StyledAbout = styled.div`
 
       mark {
         background-color: transparent;
-        color: white;
+        color: ${({ theme }) => theme.color.text[50]};
         text-shadow: 0 0 6px ${({ theme }) => theme.color.mode.primary};
       }
     }
@@ -41,7 +41,7 @@ const StyledAbout = styled.div`
       h3 {
         font-size: 12px;
         font-weight: 600;
-        color: #707070;
+        color: ${({ theme }) => theme.color.text[600]};
         text-transform: uppercase;
         letter-spacing: 0.15rem;
       }

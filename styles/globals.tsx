@@ -14,19 +14,20 @@ export const PopinAnim = styled.keyframes`
 export const Global = styled.createGlobalStyle`
   body {
     margin: 0;
-    background-color: ${({ theme }) => theme.color.background[0]};
-    color: ${({ theme }) => theme.color.text[0]};
+    background-color: ${({ theme }) => theme.color.bg[600]};
+    color: ${({ theme }) => theme.color.text[50]};
     font-family: ${({ theme }) => theme.typeface.inter};
     font-weight: 400;
     background-size: 30px 30px;
-    background-image: ${({ theme }) => `linear-gradient(to right, ${theme.color.background[1]} 1px, transparent 1px),
-      linear-gradient(to bottom, ${theme.color.background[1]} 1px, transparent 1px)`};
+    background-image: ${({ theme }) => `linear-gradient(to right, ${theme.color.bg[500]} 1px, transparent 1px),
+      linear-gradient(to bottom, ${theme.color.bg[500]} 1px, transparent 1px)`};
     width: 100vw;
     overflow-x: hidden;
+    overscroll-behavior: none;
   }
 
   html {
-    background-color: ${({ theme }) => theme.color.background[0]};
+    background-color: ${({ theme }) => theme.color.bg[600]};
   }
 
   a {
@@ -89,7 +90,7 @@ export const Global = styled.createGlobalStyle`
     content: attr(data-tooltip);
     position: absolute;
     bottom: calc(100% + 6px);
-    background: white;
+    background: ${({ theme }) => theme.color.text[50]};
     height: 27px;
     left: 50%;
     transform: translateX(-50%);
@@ -100,7 +101,7 @@ export const Global = styled.createGlobalStyle`
     align-items: center;
     border-radius: 50rem;
     font-weight: 600;
-    color: #0a0a0a;
+    color: ${({ theme }) => theme.color.bg[700]};
     pointer-events: none;
     animation: ${PopinAnim} 0.2s forwards;
   }

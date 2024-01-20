@@ -37,8 +37,8 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
           position="bottom-right"
           toastOptions={{
             style: {
-              background: '#121212',
-              color: '#b6b6b6',
+              background: theme.color.bg[600],
+              color: theme.color.text[200],
             },
             position: 'bottom-center',
           }}

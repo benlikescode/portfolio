@@ -16,10 +16,10 @@ const Hero: FC = () => {
         <h1 className="cta-title">Ben Hoeg</h1>
       </section>
 
-      <Button buttonType="ghost" onClick={() => router.push('#projects')} className="down-indicator">
+      <button onClick={() => router.push('#projects')} className="down-indicator">
         <ChevronDownIcon />
         <ChevronDownIcon />
-      </Button>
+      </button>
     </StyledHero>
   )
 }

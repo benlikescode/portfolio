@@ -4,7 +4,7 @@ const StyledSkillTag = styled.li`
   display: flex;
   align-items: center;
   border-radius: 0.5rem;
-  background-color: ${({ theme }) => theme.color.transparent[0]};
+  background-color: ${({ theme }) => theme.color.transparent[50]};
   margin-top: 10px;
   padding: 6px;
 
@@ -41,7 +41,7 @@ const StyledSkillTag = styled.li`
     svg {
       height: 100%;
       width: 100%;
-      fill: ${({ theme }) => theme.color.text[0]};
+      fill: ${({ theme }) => theme.color.text[50]};
       transition: all 0.2s ease;
 
       path {

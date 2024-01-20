@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledFooter = styled.div`
   height: 60px;
-  background-color: ${({ theme }) => theme.color.background[0]};
+  background-color: ${({ theme }) => theme.color.bg[600]};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,7 @@ const StyledFooter = styled.div`
 
     .footer-text {
       font-size: 14px;
-      color: #777;
+      color: ${({ theme }) => theme.color.text[600]};
     }
 
     .socials {
@@ -42,7 +42,7 @@ const StyledFooter = styled.div`
           fill: ${({ theme }) => theme.color.icon};
 
           &:hover {
-            fill: #777;
+            transform: scale(1.1);
           }
         }
       }

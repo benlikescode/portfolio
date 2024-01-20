@@ -34,7 +34,7 @@ const StyledProjectCard = styled.div`
     }
 
     .project-header {
-      color: ${({ theme }) => theme.color.text[0]};
+      color: ${({ theme }) => theme.color.text[50]};
       font-weight: 900;
       font-size: 22px;
       display: flex;
@@ -77,7 +77,7 @@ const StyledProjectCard = styled.div`
     }
 
     .project-desc {
-      color: ${({ theme }) => theme.color.text[1]};
+      color: ${({ theme }) => theme.color.text[300]};
       margin-top: 10px;
 
       @supports (-webkit-touch-callout: none) and (not (translate: none)) {
@@ -94,14 +94,14 @@ const StyledProjectCard = styled.div`
       margin-top: 14px;
 
       .tech-tag {
-        background: rgba(255, 255, 255, 0.05);
+        background: ${({ theme }) => theme.color.transparent[50]};
         border-radius: 50rem;
         padding: 0 12px;
         height: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: rgb(146 146 146);
+        color: ${({ theme }) => theme.color.text[400]};
         font-size: 13px;
       }
     }
@@ -116,8 +116,7 @@ const StyledProjectCard = styled.div`
       margin-top: 24px;
       width: fit-content;
       background-color: ${({ theme }) => theme.color.mode.primary}60;
-      color: white;
-      border-color: ${({ theme }) => theme.color.mode.primary}60;
+      color: ${({ theme }) => theme.color.text[50]};
       transition: 0.2s;
 
       .arrow {
@@ -126,7 +125,6 @@ const StyledProjectCard = styled.div`
 
       &:hover {
         background-color: ${({ theme }) => theme.color.mode.primary}90;
-        border-color: ${({ theme }) => theme.color.mode.primary}90;
 
         .arrow {
           transform: translate(2px, -2px);

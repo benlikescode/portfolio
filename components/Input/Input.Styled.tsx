@@ -12,7 +12,7 @@ const StyledInput = styled.div<StyledProps>`
     font-weight: 500;
     margin-bottom: 6px;
     display: block;
-    color: #6d6d6d;
+    color: ${({ theme }) => theme.color.text[700]};
   }
 
   .input-wrapper {
@@ -24,17 +24,17 @@ const StyledInput = styled.div<StyledProps>`
     textarea {
       height: 100%;
       border-radius: 5px;
-      background-color: ${({ theme }) => theme.color.background[2]};
+      background-color: ${({ theme }) => theme.color.inputBackground};
       border: 1px solid ${({ theme }) => theme.color.inputBorder};
       font-size: 15px;
       width: 100%;
       box-sizing: border-box;
-      color: #dcdcdc;
+      color: ${({ theme }) => theme.color.text[100]};
       font-weight: 400;
       padding: 0 14px;
 
       &::placeholder {
-        color: #555;
+        color: ${({ theme }) => theme.color.text[700]};
       }
     }
 
