@@ -1,24 +1,29 @@
 import styled from 'styled-components'
 
 const StyledProjectCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 300px auto;
+  align-items: center;
 
   &:not(:last-child) {
     margin-bottom: 5rem;
-  }  
-
-  @media (min-width: 950px) {
-    flex-direction: row;
   }
-  
-  .projectDetails {
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-details {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
     flex: 1;
     max-width: 30rem;
+
+    @media (max-width: 900px) {
+      margin-top: 0;
+    }
 
     @supports (-webkit-touch-callout: none) and (not (translate: none)) {
       margin-bottom: 5rem;
@@ -27,134 +32,160 @@ const StyledProjectCard = styled.div`
         margin-right: 5rem;
       }
     }
-  }
 
-  .projectHeader {
-    color: #e99465;
-    font-weight: 600;
-    font-size: 2.25rem;
-    font-family: var(--headerFont);
-    letter-spacing: -2px;
+    .project-header {
+      color: ${({ theme }) => theme.color.text[50]};
+      font-weight: 900;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
 
-    @media (max-width: 600px) {
-      font-size: 1.875rem;
-    }
-  }
+      .project-links {
+        display: flex;
+        align-items: center;
+        margin-left: 12px;
 
-  .projectDesc {
-    font-size: 18px;
+        .project-link-item {
+          display: flex;
+          align-items: center;
 
-    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-      margin-top: 1.5rem;
-    }
-  }
+          svg {
+            height: 20px;
+            fill: ${({ theme }) => theme.color.icon};
 
-  .techTags {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 1.5rem;
-  }
+            &:hover {
+              fill: ${({ theme }) => theme.color.mode.secondary};
+            }
+          }
 
-  .techTag {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 0.5rem;
-    padding: 0.5rem 0.85rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: #fdceb5;
-    font-size: 14px;
+          &:not(:last-child) {
+            margin-right: 8px;
+          }
 
-    @media (max-width: 600px) {
-      font-size: 0.8rem;
-    }
+          &:hover {
+            color: ${({ theme }) => theme.color.mode.avatar};
+          }
 
-    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-      &:not(:last-child) {
-        margin-right: 10px;
-      }   
-    }
-  }
-
-  .projectPreviewWrapper {
-    position: relative;
-    height: 25rem;
-    width: 100%;
-    overflow: hidden;
-    background: ${({ theme }) => `linear-gradient(180deg, #ffc6a8 0%, ${theme.color.primary} 100%)`};
-    border-radius: 1rem;
-    max-width: 40rem; 
-
-    @media (min-width: 950px) {
-      flex: 1;
-    }
-
-    @media (max-width: 600px) {
-      height: 16rem;
-    }
-  }
-
-  .projectPreview {
-    position: absolute;
-    top: 2.5rem;
-    left: 2.5rem;
-    height: 484.5px;
-    width: 960px;
-    overflow: hidden;
-    border-radius: 0.5rem;
-    //cursor: pointer;
-
-    :focus {
-      outline: none;
-    }
-
-    /*
-    :hover {
-      transform: scale(1.01);
-    }
-    */
-
-    @media (max-width: 600px) {
-      width: 533px;
-      height: 269px;
-      /*
-      :hover {
-        transform: none;
+          .link-label {
+            margin-left: 0.5rem;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            font-size: 14px;
+          }
+        }
       }
-      */
     }
 
-    @media (max-width: 500px) {
-      top: 1.5rem;
-      left: 1.5rem;
+    .project-desc {
+      color: ${({ theme }) => theme.color.text[300]};
+      margin-top: 10px;
+
+      @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+        margin-top: 1.5rem;
+      }
+    }
+
+    .tech-tags {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      user-select: none;
+      margin-top: 14px;
+
+      .tech-tag {
+        background: ${({ theme }) => theme.color.transparent[50]};
+        border-radius: 50rem;
+        padding: 0 12px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: ${({ theme }) => theme.color.text[400]};
+        font-size: 13px;
+      }
+    }
+
+    .post-btn {
+      height: 40px;
+      padding: 0 12px 0 14px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 24px;
+      width: fit-content;
+      background-color: ${({ theme }) => theme.color.mode.primary}60;
+      color: ${({ theme }) => theme.color.text[50]};
+      transition: 0.2s;
+
+      .arrow {
+        transition: 0.2s;
+      }
+
+      &:hover {
+        background-color: ${({ theme }) => theme.color.mode.primary}90;
+
+        .arrow {
+          transform: translate(2px, -2px);
+        }
+      }
+
+      svg {
+        height: 22px;
+        margin-left: 6px;
+      }
     }
   }
 
-  .projectLinks {
-    display: flex;
-    align-items: center;
+  .project-preview-wrapper {
+    position: relative;
+    overflow: hidden;
+    background: ${({ theme }) => `linear-gradient(0deg, ${theme.color.mode.primary}91, ${theme.color.mode.primary}1a)`};
+    border-radius: 1rem;
+    grid-area: 1;
+    height: 250px;
+    max-width: 480px;
+    width: 100%;
 
-    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-      margin-top: 1.5rem;
+    ::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 0 0 1px ${({ theme }) => theme.color.mode.gradient};
+      border-radius: 1rem;
     }
-  }
 
-  .projectLinkItem {
-    display: flex;
-    align-items: center;
+    .project-preview {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      height: 404px;
+      width: 737px;
+      user-select: none;
 
-    &:not(:last-child) {
-      margin-right: 1rem;
+      @media (max-width: 900px) {
+        top: 16px;
+        left: 16px;
+      }
+
+      img {
+        border-radius: 0.5rem;
+      }
+
+      :focus {
+        outline: none;
+      }
+
+      ::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        box-shadow: inset 0 0 0 1px #ffffff24, 0 5px 8px 0px #00000070;
+        z-index: 1;
+        border-radius: 0.5rem;
+      }
     }
-  }
-
-  .linkLabel {
-    margin-left: 0.5rem;
-    text-decoration: underline;
-    text-underline-offset: 2px;
   }
 `
 

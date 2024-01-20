@@ -1,59 +1,83 @@
-import { ExternalLinkIcon } from '@heroicons/react/solid'
-import { FC } from 'react'
-import { StyledProjectCard } from '.'
-import Project from '../../types/Project'
-import { Icon } from '../Icon'
-import { GithubIcon } from '../Icon/Socials'
 import Image from 'next/image'
+import { FC } from 'react'
+import Project from '../../types/Project'
+import { ExternalLinkIcon, GlobeIcon } from '../Icon'
+import { GithubIcon, RedditIcon } from '../Icon/Socials'
+import { StyledProjectCard } from './'
 
 type Props = {
-  project: Project;
+  project: Project
 }
 
 const ProjectCard: FC<Props> = ({ project }) => {
+  const getLinkIcon = (type: Project['links'][number]['type']) => {
+    switch (type) {
+      case 'github':
+        return <GithubIcon />
+      case 'reddit':
+        return <RedditIcon />
+      case 'web':
+        return <GlobeIcon />
+    }
+  }
+
+  const getLinkLabel = (link: Project['links'][number]) => {
+    switch (link.type) {
+      case 'github':
+        return 'GitHub'
+      case 'reddit':
+        return 'Reddit'
+      case 'web':
+        return new URL(link.url).hostname
+    }
+  }
+
   return (
     <StyledProjectCard>
-      <div className="projectDetails">
-        <h3 className="projectHeader">{project.name}</h3>
+      <div className="project-details">
+        <h3 className="project-header">
+          {project.name}
+          <div className="project-links">
+            {project.links.map((link) => {
+              return (
+                <a
+                  className="project-link-item"
+                  data-tooltip={getLinkLabel(link)}
+                  href={link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={link.url}
+                >
+                  {getLinkIcon(link.type)}
+                </a>
+              )
+            })}
+          </div>
+        </h3>
 
-        <div className="projectLinks">
-          {project.githubLink && (
-            <a className="projectLinkItem" href={project.githubLink} target="_blank" rel="noreferrer">
-              <Icon size={22}>
-                <GithubIcon />
-              </Icon>
-              <span className="linkLabel">Github</span>
-            </a>
-          )}
-        
-          {project.liveLink && (
-            <a className="projectLinkItem" href={project.liveLink} target="_blank" rel="noreferrer">
-              <Icon size={26} fill="#626262">
-                <ExternalLinkIcon />
-              </Icon>
-              <span className="linkLabel">Website</span>
-            </a>  
-          )}               
-        </div>
-        
-        <div className="projectDesc">
+        <div className="project-desc">
           <p>{project.description}</p>
         </div>
 
-        <ul className="techTags">
+        <ul className="tech-tags">
           {project.tags.map((tag, idx) => (
-            <li className="techTag" key={idx}>
+            <li className="tech-tag" key={idx}>
               <span>{tag}</span>
             </li>
-          ))}    
+          ))}
         </ul>
+
+        <a className="post-btn" href={project.button.url} target="_blank" rel="noreferrer" draggable={false}>
+          {project.button.label}
+          <ExternalLinkIcon />
+        </a>
       </div>
 
-      <div className="projectPreviewWrapper">
-        <div className="projectPreview">
-          <Image src={project.imageUrl} alt="GeoHub Project Preview" layout='fill' objectFit='cover' objectPosition="0%" />
+      <div className="project-preview-wrapper">
+        <div className="project-preview">
+          <Image src={project.imageUrl} alt="" layout="fill" objectFit="cover" />
         </div>
-      </div> 
+      </div>
     </StyledProjectCard>
   )
 }

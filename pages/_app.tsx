@@ -1,15 +1,18 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import { ThemeProvider } from 'styled-components'
-import { breakpoint, elevation } from '../utils/theme'
+import '../fonts/index.css'
 import { FC, useContext } from 'react'
-import { ColorProvider, colorStore } from '../components/ColorContext'
+import { Toaster } from 'react-hot-toast'
+import { ThemeProvider } from 'styled-components'
+import { MetaHead } from '../components/MetaHead'
+import { ColorProvider, colorStore } from '../context/ColorContext'
 import { Global } from '../styles/globals'
+import { theme } from '../utils/theme'
+import { darkMode, lightMode } from '../utils/theme/color'
 
+import type { AppProps } from 'next/app'
 const appContainer = ({ ...rest }: AppProps) => {
   return (
     <ColorProvider>
-      <App {...rest}/>
+      <App {...rest} />
     </ColorProvider>
   )
 }
@@ -17,18 +20,30 @@ const appContainer = ({ ...rest }: AppProps) => {
 export default appContainer
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
-  const { colorTheme } = useContext(colorStore)
-
-  const theme = {
-    color: colorTheme, 
-    breakpoint,
-    elevation
-  }
+  const { colorTheme, appTheme } = useContext(colorStore)
 
   return (
-    <ThemeProvider theme={theme}>
-      <Global />
-      <Component {...pageProps}/>
-    </ThemeProvider>
+    <>
+      <MetaHead />
+      <ThemeProvider
+        theme={{
+          ...theme,
+          color: appTheme === 'dark' ? { ...darkMode, mode: colorTheme } : { ...lightMode, mode: colorTheme },
+        }}
+      >
+        <Global />
+        <Component {...pageProps} />
+        <Toaster
+          position="bottom-right"
+          toastOptions={{
+            style: {
+              background: theme.color.bg[600],
+              color: theme.color.text[200],
+            },
+            position: 'bottom-center',
+          }}
+        />
+      </ThemeProvider>
+    </>
   )
 }

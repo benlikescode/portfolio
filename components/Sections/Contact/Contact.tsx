@@ -1,65 +1,58 @@
-import { LocationMarkerIcon, MailIcon } from '@heroicons/react/solid'
-import { FC } from 'react'
-import { StyledContact } from '.'
+import { FC, FormEvent, useState } from 'react'
+import { toast } from 'react-hot-toast'
 import { Button } from '../../Button'
-import { Icon } from '../../Icon'
 import { Input } from '../../Input'
+import { StyledContact } from './'
 
 const Contact: FC = () => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
+  const handleFormSubmit = (e: FormEvent) => {
+    e.preventDefault()
+    toast.success('I got your message 😀')
+
+    setName('')
+    setEmail('')
+    setMessage('')
+  }
+
   return (
     <StyledContact>
-      <section className="contactSection" id="contact">
-        <section className="contactLeft">
-          <h2>Contact Me</h2>
-          <p className="contactText">Feel free to send me an email or message!</p>
-          <div className="contactInfoWrapper">
-            <div className="contactItem">
-              <div className="contactIcon">
-                <Icon size={24} fill="#fff">
-                  <MailIcon />
-                </Icon>
-              </div>
-              <span>benhoeg@outlook.com</span>
-            </div>
+      <section className="contact-section" id="contact">
+        <h2>Contact Me</h2>
 
-            <div className="contactItem">
-              <div className="contactIcon">
-                <Icon size={24} fill="#fff">
-                  <LocationMarkerIcon />
-                </Icon>
-              </div>
-              <span>Nova Scotia, Canada</span>
-            </div>
-          </div>
-        </section>
-
-        <form className="contactForm" name="contact" method="POST" action="/success" data-netlify="true">
+        <form className="contact-form" name="contact" data-netlify="true" onSubmit={(e) => handleFormSubmit(e)}>
           <input type="hidden" name="form-name" value="contact" />
-          <div className="topInputs">
-            <Input 
-              type="text" 
-              name="name" 
-              label="Name" 
-              maxLength={60} 
-              isRequired
-            />
-            <Input 
-              type="text" 
-              name="email" 
-              label="Email" 
-              maxLength={60} 
+
+          <div className="top-inputs-wrapper">
+            <Input type="text" name="name" label="Name" callback={setName} value={name} maxLength={100} isRequired />
+            <Input
+              type="text"
+              name="email"
+              label="Email"
+              callback={setEmail}
+              value={email}
+              maxLength={100}
               isRequired
             />
           </div>
-          <Input 
-            type="text" 
-            name="message" 
-            label="Message" 
-            maxLength={2000} 
-            isTextArea 
+
+          <Input
+            type="text"
+            name="message"
+            label="Message"
+            callback={setMessage}
+            value={message}
+            maxLength={2000}
             isRequired
+            isTextArea
           />
-          <Button buttonType="solid" width="100%">Send Message</Button>
+
+          <Button buttonType="solid" width="100%">
+            Send Message
+          </Button>
         </form>
       </section>
     </StyledContact>

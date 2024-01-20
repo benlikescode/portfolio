@@ -1,53 +1,67 @@
-import { FC, useState } from 'react'
-import { StyledNavbar } from '.'
-import { Menu } from '../../Menu'
 import Link from 'next/link'
-import { Select } from '../../Select'
+import { FC, useContext } from 'react'
+import { MoonIcon, SunIcon } from '@heroicons/react/20/solid'
+import { colorStore } from '../../../context/ColorContext'
+import { THEMES } from '../../../utils/hooks/useColorTheme'
+import { StyledNavbar } from './'
 
 const Navbar: FC = () => {
-  const THEME_OPTIONS = ['Blue', 'Red', 'Purple', 'Green', 'Teal']
+  const { setMode, colorIdx, setAppMode, appTheme } = useContext(colorStore)
+
+  const changeColorTheme = () => {
+    setMode(colorIdx + 1 >= THEMES.length ? 0 : colorIdx + 1)
+  }
+
+  const changeTheme = () => {
+    setAppMode(appTheme === 'dark' ? 'light' : 'dark')
+  }
 
   return (
     <StyledNavbar>
       <header>
-        <Link href="/">
-          <a>
-            <div className="avatarWrapper">
-              <div className="avatar">
-                <img src="favicon.ico" alt="Ben Hoeg" />
-              </div> 
-            </div>          
-          </a>
-        </Link>
+        <div className="header-group">
+          <Link href="/">
+            <a>
+              <div className="avatar-wrapper">
+                <div className="avatar">
+                  <img src="favicon.ico" alt="Ben Hoeg" />
+                </div>
+              </div>
+            </a>
+          </Link>
 
-        <nav>
-          <ul className="linksWrapper">
-            <li>
-              <Link href="/#about">
-                <a className="navLink">About Me</a>          
-              </Link>
-            </li>
+          <nav>
+            <ul className="links-wrapper">
+              <li>
+                <Link href="#about">
+                  <a className="nav-link">About</a>
+                </Link>
+              </li>
 
-            <li>
-              <Link href="/#projects">
-                <a className="navLink">My Projects</a>          
-              </Link>
-            </li>
+              <li>
+                <Link href="#projects">
+                  <a className="nav-link">Projects</a>
+                </Link>
+              </li>
 
-            <li>
-              <Link href="/#contact">
-                <a className="navLink">Contact Me</a>          
-              </Link>
-            </li>   
+              <li>
+                <Link href="#contact">
+                  <a className="nav-link">Contact</a>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
-            <li>
-              <Select options={THEME_OPTIONS} />
-            </li>    
-          </ul>
-
-          <Menu />
-        </nav>     
-      </header>    
+        <div className="theme-buttons">
+          <button className="theme-switcher" onClick={() => changeColorTheme()}>
+            <div className="current-theme"></div>
+          </button>
+          <button className="theme-switcher" onClick={() => changeTheme()}>
+            {appTheme === 'dark' ? <SunIcon /> : <MoonIcon />}
+          </button>
+        </div>
+      </header>
     </StyledNavbar>
   )
 }

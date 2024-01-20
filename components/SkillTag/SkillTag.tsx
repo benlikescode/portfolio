@@ -1,23 +1,15 @@
-import { FC, ReactNode } from 'react'
-import { StyledSkillTag } from '.'
-import { Icon } from '../Icon'
+import { FC } from 'react'
+import SKILLS from '../../utils/constants/skills'
+import { StyledSkillTag } from './'
 
 type Props = {
-  label: string;
-  icon: ReactNode;
-  lessGap?: boolean;
+  skill: (typeof SKILLS)[number]
 }
 
-const SkillTag: FC<Props> = ({ label, icon, lessGap }) => {
+const SkillTag: FC<Props> = ({ skill }) => {
   return (
-    <StyledSkillTag lessGap={lessGap}>
-      <div className="iconWrapper">
-        <div className="icon">
-          {icon}
-        </div>
-      </div>
-
-      <span className="skillTagLabel">{label}</span>
+    <StyledSkillTag data-tooltip={skill.name}>
+      <div className="icon">{skill.icon}</div>
     </StyledSkillTag>
   )
 }

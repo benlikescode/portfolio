@@ -6,28 +6,23 @@ const StyledProjects = styled.div`
   justify-content: center;
   padding: 0 1.25rem;
 
-  .projectsSection {
-    max-width: 1160px;
+  .projects-section {
+    max-width: ${({ theme }) => theme.breakpoint.maxWidth};
     width: 100%;
-    padding: 5rem 0 10rem 0;
-  }
+    padding: 4rem 0 10rem 0;
+    scroll-margin-top: 60px;
 
-  .projectCards {
-    margin-top: 6rem;
-
-    @media (max-width: 600px) {
-      margin-top: 4rem;
+    h2 {
+      font-size: 15px;
+      font-family: ${({ theme }) => theme.typeface.graphik};
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: ${({ theme }) => theme.color.text[600]};
+      text-transform: uppercase;
     }
-  }
 
-
-  h2 {
-    font-size: 3rem;
-    font-family: var(--headerFont);
-    font-weight: 600;
-
-    @media (max-width: 600px) {
-      font-size: 2.25rem;
+    .project-cards {
+      margin-top: 4rem;
     }
   }
 `

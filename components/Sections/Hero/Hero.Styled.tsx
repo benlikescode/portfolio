@@ -16,109 +16,69 @@ const DownIndicatorAnim = keyframes`
 `
 
 const StyledHero = styled.div`
-  height: 100vh;
+  height: calc(60vh - 60px);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 1.25rem;
   position: relative;
   overflow: hidden;
-  margin-top: -100px;
-  padding-top: 100px;
+  font-family: ${({ theme }) => theme.typeface.climate};
 
-  .heroContent {
+  .hero-content {
     max-width: 1400px;
     width: 100%;
     display: grid;
     gap: 1rem;
-    margin-top: -8rem;
     text-align: center;
     pointer-events: none;
-  }
+    z-index: 9;
 
-  .ctaBtn {
-    display: block;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    height: 42px;
-    padding: 0 25px;
-    font-size: 1rem;
-    font-weight: 500;
-    width: fit-content;
-    user-select: none;
-    background-color: ${({ theme }) => theme.color.primary};
+    .cta-title {
+      margin-bottom: 2rem;
+      font-family: ${({ theme }) => theme.typeface.graphik};
+      font-size: 90px;
+      color: ${({ theme }) => theme.color.heroName};
+      font-weight: 500;
+      font-family: ${({ theme }) => theme.typeface.climate};
+      text-shadow: 0 10px 0px ${({ theme }) => theme.color.mode.secondary},
+        0 20px 0px ${({ theme }) => theme.color.mode.primary}, 0 6px 19px ${({ theme }) => theme.color.mode.primary}6b;
+      -webkit-text-stroke: 1px ${({ theme }) => theme.color.mode.primary};
+      text-transform: uppercase;
+      user-select: none;
 
-    span {
-      margin-right: 8px;
+      @media (max-width: 1100px) {
+        font-size: 100px;
+      }
+
+      @media (max-width: 850px) {
+        font-size: 70px;
+      }
+
+      @media (max-width: 650px) {
+        font-size: 60px;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 40px;
+      }
     }
   }
 
-  .ctaTitle {
-    margin-bottom: 2rem;
-    font-family: var(--headerFont);
-  }
-
-  .header {
-    display: block;
-    font-size: 10rem;
-    color: var(--color1);
-    font-weight: 700;
-
-    @media (max-width: 900px) {
-      font-size: 7rem;
-    }
-
-    @media (max-width: 700px) {
-      font-size: 6rem;
-    }
-
-    @media (max-width: 600px) {
-      font-size: 4.2rem;
-    }
-  }
-
-  .subHeader {
-    display: block;
-    font-size: 4rem;
-    color: ${({ theme }) => theme.color.light};
-    font-weight: 500;
-    margin-top: 2rem;
-
-    @media (max-width: 1160px) {
-      font-size: 5.3rem;
-    }
-
-    @media (max-width: 900px) {
-      font-size: 4rem;
-    }
-
-    @media (max-width: 700px) {
-      font-size: 3.2rem;
-    }
-
-    @media (max-width: 600px) {
-      font-size: 2.2rem;
-    }
-  }
-
-  .downIndicator {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 40px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #ffffff11;
-    color: white;
-    padding: 0;
-    border: none;
-    box-shadow: none;
+  .down-indicator {
     display: grid;
     align-content: center;
+    justify-content: center;
+    gap: 8px;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: ${({ theme }) => theme.color.transparent[100]};
+    color: ${({ theme }) => theme.color.text[50]};
 
     @supports (-webkit-touch-callout: none) {
       bottom: 100px;

@@ -1,50 +1,51 @@
 import styled from 'styled-components'
 
 const StyledFooter = styled.div`
-  background-color: #070707;
+  height: 60px;
+  background-color: ${({ theme }) => theme.color.bg[600]};
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 1.25rem;
-  border-top: 1px solid #141414;
+  border-top: 1px solid ${({ theme }) => theme.color.border};
 
   footer {
-    max-width: 1160px;
+    max-width: ${({ theme }) => theme.breakpoint.maxWidth};
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.3rem 0;
-  }
 
-  .socials {
-    display: flex;
-    align-items: center;
-    gap: 23px;
-
-    @media (max-width: 600px) {
-      gap: 1rem;
+    .footer-text {
+      font-size: 14px;
+      color: ${({ theme }) => theme.color.text[600]};
     }
-  }
 
-  .socialItem {
-    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-      &:not(:last-child) {
-        margin-right: 23px;
-      }
+    .socials {
+      display: flex;
+      align-items: center;
+      gap: 16px;
 
       @media (max-width: 600px) {
-        margin-right: 1rem;
+        gap: 1rem;
       }
-    }
-  }
 
-  .footerText {
-    font-size: 1rem;
-    color: #888;
+      .social-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    @media (max-width: 600px) {
-      font-size: 0.8rem;
+        svg {
+          height: 20px;
+          width: 20px;
+          fill: ${({ theme }) => theme.color.icon};
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
     }
   }
 `

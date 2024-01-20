@@ -1,32 +1,22 @@
 import { FC } from 'react'
-import { StyledFooter } from '.'
-import { Icon } from '../../Icon'
-import { LinkedInIcon, GithubIcon, TwitterIcon } from '../../Icon/Socials'
+import socials from '../../../utils/constants/socials'
+import { GithubIcon, LinkedInIcon } from '../../Icon/Socials'
+import { StyledFooter } from './'
 
 const Footer: FC = () => {
   return (
     <StyledFooter>
       <footer>
-        <span className="footerText">&copy; Ben Hoeg {new Date().getFullYear().toString()}</span>
+        <span className="footer-text">&copy; Ben Hoeg {new Date().getFullYear().toString()}</span>
 
         <div className="socials">
-          <a className="socialItem" href="https://www.linkedin.com/in/benhoeg/" target="_blank" rel="noreferrer">
-            <Icon size={20} fill="#888">
-              <LinkedInIcon />
-            </Icon>
+          <a className="social-item" href={socials.github} target="_blank" rel="noreferrer">
+            <GithubIcon />
           </a>
-            
-          <a className="socialItem" href="https://github.com/benlikescode" target="_blank" rel="noreferrer">
-            <Icon size={20} fill="#888">
-              <GithubIcon />
-            </Icon>
+
+          <a className="social-item" href={socials.linkedIn} target="_blank" rel="noreferrer">
+            <LinkedInIcon />
           </a>
-                
-          <a className="socialItem" href="https://twitter.com/benlikescode" target="_blank" rel="noreferrer">
-            <Icon size={20} fill="#888">
-              <TwitterIcon />
-            </Icon>          
-          </a>     
         </div>
       </footer>
     </StyledFooter>

@@ -1,46 +1,38 @@
 import { useEffect, useState } from 'react'
-import { blueTheme, redTheme, purpleTheme, greenTheme, tealTheme } from '../theme'
+import { blueTheme, darkMode, greenTheme, lightMode, purpleTheme, redTheme, tealTheme } from '../theme/color'
+
+export const THEMES = [blueTheme, redTheme, purpleTheme, greenTheme, tealTheme]
+
+type AppTheme = 'light' | 'dark'
 
 const useColorTheme = () => {
-    const [colorTheme, setColorTheme] = useState(blueTheme)
-    const [colorName, setColorName] = useState('Blue')
+  const [colorTheme, setColorTheme] = useState(blueTheme)
+  const [colorIdx, setColorIdx] = useState(0)
+  const [appTheme, setAppTheme] = useState<AppTheme>('dark')
 
-    const updateTheme = (mode: string) => {
-      switch (mode) {
-        case 'Blue':
-          setColorTheme({...blueTheme})
-          break
-        case 'Red':
-          setColorTheme({...redTheme})
-          break
-        case 'Purple':
-          setColorTheme({...purpleTheme})
-          break
-        case 'Green':
-          setColorTheme({...greenTheme})
-          break
-        case 'Teal':
-          setColorTheme({...tealTheme})
-          break
-        default:
-          setColorTheme({...blueTheme})
-      }
-    }
+  const setMode = (colorIdx: number) => {
+    console.log(colorIdx)
+    window.localStorage.setItem('theme', colorIdx.toString())
+    setColorTheme(THEMES[colorIdx])
+    setColorIdx(colorIdx)
+  }
 
-    const setMode = (mode: string) => {
-      console.log(mode)
-      window.localStorage.setItem('theme', mode)
-      updateTheme(mode)
-      setColorName(mode)
-    }
+  const setAppMode = (mode: 'light' | 'dark') => {
+    window.localStorage.setItem('app-theme', mode)
+    setAppTheme(mode)
+  }
 
-    useEffect(() => {
-      const localTheme = window.localStorage.getItem('theme')
-      localTheme && updateTheme(localTheme)
-      localTheme && setColorName(localTheme)
-    }, [])
+  useEffect(() => {
+    const localTheme = Number(window.localStorage.getItem('theme'))
+    const localAppTheme = window.localStorage.getItem('app-theme') as AppTheme
 
-    return { colorTheme, setMode, colorName }
+    localTheme && setColorTheme(THEMES[localTheme])
+    localTheme && setColorIdx(localTheme)
+
+    localAppTheme && setAppTheme(localAppTheme)
+  }, [])
+
+  return { colorTheme, setMode, setAppMode, colorIdx, appTheme }
 }
 
 export default useColorTheme

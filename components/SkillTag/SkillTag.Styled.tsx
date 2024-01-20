@@ -1,46 +1,25 @@
 import styled from 'styled-components'
 
-type StyledProps = {
-  lessGap?: boolean;
-}
-
-const StyledSkillTag = styled.li<StyledProps>`
+const StyledSkillTag = styled.li`
   display: flex;
   align-items: center;
-  padding: 0.875rem;
-  padding-right: 1.5rem;
-  width: fit-content;
   border-radius: 0.5rem;
-  background-color: rgb(255 197 166 / 10%);
+  background-color: ${({ theme }) => theme.color.transparent[50]};
   margin-top: 10px;
-  
-  :hover {
-    background-color: rgb(220 180 150 / 10%);
+  padding: 6px;
+
+  &:hover {
+    background-color: ${({ theme }) => `${theme.color.mode.secondary}20`};
+    transition: all 0.2s ease;
+
+    .icon svg {
+      fill: ${({ theme }) => theme.color.mode.secondary};
+    }
   }
 
   @supports (-webkit-touch-callout: none) and (not (translate: none)) {
     &:not(:last-child) {
       margin-right: 10px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    padding: 0.5rem;
-    padding-right: 0.875rem;
-  }
-  
-  .iconWrapper {
-    border-radius: 5px;
-    height: 35px;
-    width: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-
-    @media (max-width: 600px) {
-      height: 30px;
-      width: 30px;
     }
   }
 
@@ -50,10 +29,20 @@ const StyledSkillTag = styled.li<StyledProps>`
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 35px;
+    width: 35px;
+    padding: 5px;
+
+    @media (max-width: 600px) {
+      height: 30px;
+      width: 30px;
+    }
 
     svg {
       height: 100%;
       width: 100%;
+      fill: ${({ theme }) => theme.color.text[50]};
+      transition: all 0.2s ease;
 
       path {
         stroke-width: 1.5;
@@ -61,12 +50,6 @@ const StyledSkillTag = styled.li<StyledProps>`
         width: 100%;
       }
     }
-  }
-
-  .skillTagLabel {
-    color: #fdceb5;
-    font-size: 1rem;
-    margin-left: ${({ lessGap }) => lessGap ? 5 : 10}px;
   }
 `
 
