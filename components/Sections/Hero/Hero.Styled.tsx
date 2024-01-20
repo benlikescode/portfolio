@@ -80,10 +80,6 @@ const StyledHero = styled.div`
     background-color: ${({ theme }) => theme.color.transparent[100]};
     color: ${({ theme }) => theme.color.text[50]};
 
-    @supports (-webkit-touch-callout: none) {
-      bottom: 100px;
-    }
-
     svg {
       height: 24px;
       width: 24px;
